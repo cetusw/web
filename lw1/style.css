@@ -82,8 +82,9 @@ ul {
 }
 .bottom-bar {
     height: 74px;
-    background: url('src/images/frame.svg') no-repeat;
-    background-size: 100%;
+    background: rgba(35, 47, 56, 0.6) url('src/images/frame.svg') no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
 }
 .inner-bottom-bar {
     width: 66.7%;
