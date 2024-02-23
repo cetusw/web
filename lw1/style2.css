@@ -6,68 +6,192 @@ ul {
     margin: 0;
     padding: 0;
 }
-.top-bar {
-    height: 2.8%;
-    width: 100%;
+.head {
+    height: 500px;
+    background: url("src/images/hills.jpg") no-repeat;
+    background-size: cover;
 }
-.top-bar__inner {
+.head__top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 66.7%;
-    height: 100%;
-    margin: 0 auto;
+    height: 14.8%;
+    margin: 0 auto 103px auto;
 }
-.top-bar__logo {
-    display: inline-block;
-    vertical-align: middle;
-}
-.top-bar__inner ul {
-    display: inline-block;
-}
-.top-bar__top-buttons {
-    display: inline-block;
-    height: 100%;
-    width: calc(100% - 93px);
-    text-align: right;
-    vertical-align: middle;
+.head__logo {
+    height: 26px;
+    z-index: 1;
 }
 .top-bar__button {
     cursor: pointer;
 }
-.top-bar__top-buttons li {
-    display: inline-block;
+.head__top-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 376px;
+    align-items: center;
+    z-index: 1;
+}
+.head__top-buttons li {
     text-decoration: none;
-    padding: 27px 20px;
     font-family: "Oxygen", sans-serif;
     font-weight: 400;
     font-size: 12px;
-    color: #2e2e2e;
+    color: #ffffff;
     line-height: 20px;
 }
-
+.head__text {
+    text-align: center;
+}
+.head__text h1 {
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 51px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.head__text h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 31px;
+    color: rgba(255, 255, 255, 0.63);
+}
+.head__button-orange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DD783F;
+    border-radius: 3px;
+    margin: 0 auto;
+    width: 167px;
+    height: 44px;
+}
+.head__button-orange p {
+    margin: 0;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 154%;
+    text-align: center;
+    color: #fff;
+}
+.navigation-bar {
+    height: 65px;
+}
+.navigation-bar__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 960px;
+}
+.navigation-bar__button {
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: #768088;
+}
+.posts {
+    background-color: #F7F7F7;
+}
+.posts__title {
+    padding-top: 60px;
+    margin: 0 0 16px 0;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #2e2e2e;
+}
+.posts__divider {
+    height: 1px;
+    width: 188px;
+    background-color: #DEDEDE;
+    margin: 0 auto 23px auto;
+}
+.posts__first {
+    height: 280px;
+    width: 460px;
+    background: url("src/images/sky-small.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+}
+.posts__first h1 {
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 111%;
+    color: #fff;
+    margin: 0 0 6px 0;
+}
+.posts__first h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 179%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 12px 0;
+}
+.posts__bottom-bar {
+    display: flex;
+}
+.posts__name {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 292%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+.posts__date {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 292%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+.posts__second {
+    height: 280px;
+    width: 460px;
+    background: url("src/images/lamp.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+}
+.posts__featured {
+    width: 940px;
+    margin: 0 auto;
+}
+.posts__blocks {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
 
 .bottom-bar {
-    height: 2.8%;
     background: rgba(35, 47, 56, 0.6) url('src/images/frame.svg') no-repeat;
     background-size: cover;
     background-blend-mode: darken;
 }
 .bottom-bar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 66.7%;
     height: 100%;
     margin: 0 auto;
-}
-.bottom-bar__logo {
-    display: inline-block;
-    vertical-align: middle;
-}
-.bottom-bar__inner ul {
-    display: inline-block;
-}
-.bottom-bar__bottom-buttons {
-    display: inline-block;
-    height: 100%;
-    width: calc(100% - 93px);
-    text-align: right;
-    vertical-align: middle;
 }
 .top-buttons__button {
     cursor: pointer;
