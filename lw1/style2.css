@@ -236,25 +236,32 @@ ul {
 .posts__recent {
     width: 940px;
     margin: 0 auto;
+    padding-bottom: 83px;
 }
 .posts__blocks-featured {
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
 }
-.posts__first-recent {
+.posts__blocks-recent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.posts__block-recent {
     width: 296px;
     height: 291px;
     background-color: #ffffff;
+    margin-bottom: 25px;
 }
-.posts__first-image {
+.posts__image {
     vertical-align: top;
     margin-bottom: 14px;
 }
-.posts__first-recent-content {
+.posts__recent-content {
     padding-left: 13px;
 }
-.posts__first-recent-content h1 {
+.posts__recent-content h1 {
     font-family: "Lora", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -262,13 +269,14 @@ ul {
     color: #101315;
     margin: 0 0 6px 0;
 }
-.posts__first-recent-content h2 {
+.posts__recent-content h2 {
+    height: 38px;
     font-family: "Oxygen", sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 146%;
     color: #7a7a7a;
-    margin: 0 0 32px 0;
+    margin: 0 0 12px 0;
 }
 .posts__divider_inner {
     width: 100%;
@@ -276,26 +284,33 @@ ul {
     margin: 0 0 7px 0;
     background-color: #EFEFEF;
 }
-.posts__second-recent-avatar {
-    padding-left: 13px;
+.posts__bottom-bar {
+    display: flex;
+    justify-content: space-between;
 }
-.posts__second-recent-name {
+.posts__account {
+    display: flex;
+}
+.posts__recent-avatar {
+    margin: 5px 0 0 13px ;
+    height: 26px;
+}
+.posts__recent-name {
     font-family: "Oxygen", sans-serif;
     font-weight: 400;
     font-size: 11px;
     line-height: 318%;
     color: #999;
-    padding-left: 10px;
-    margin: 0;
+    width: 100px;
+    margin: 0 0 0 10px;
 }
-.posts__second-recent-date {
+.posts__recent-date {
     font-family: "Oxygen", sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 292%;
     color: #999;
-    padding-left: 100px;
-    margin: 0;
+    margin: 0 13px 0 0;
 }
 
 .bottom-bar {
