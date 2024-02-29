@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Переименован файл, начата бэм" />
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Страница +- готова, требуется проверка">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/style2.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/mikhail/projects/web/lw1",
+    "last_opened_file_path": "/home/mikhail/projects/web/live-вёрстка/index.html",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,7 +86,6 @@
       <workItem from="1708774655433" duration="14024000" />
       <workItem from="1709135135650" duration="104000" />
       <workItem from="1709204953197" duration="3087000" />
-      <workItem from="1709224721552" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -165,15 +167,7 @@
       <option name="project" value="LOCAL" />
       <updated>1708796127740</updated>
     </task>
-    <task id="LOCAL-00011" summary="Переименован файл, начата бэм">
-      <option name="closed" value="true" />
-      <created>1709224831637</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1709224831637</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +194,6 @@
     <MESSAGE value="Полностью сделана шапка, начат блок с постами" />
     <MESSAGE value="Сделано &quot;Избранное&quot;, начат блок &quot;Почседние&quot;" />
     <MESSAGE value="Страница +- готова, требуется проверка" />
-    <MESSAGE value="Переименован файл, начата бэм" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переименован файл, начата бэм" />
+    <option name="LAST_COMMIT_MESSAGE" value="Страница +- готова, требуется проверка" />
   </component>
 </project>
