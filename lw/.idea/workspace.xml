@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Страница +- готова, требуется проверка">
+      <change beforePath="$PROJECT_DIR$/.idea/lw1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/William.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/william.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/escapewhite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/escape-white.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/fifth.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/05.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/first.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/fourth.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/second.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/sixth.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/06.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/third.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/03.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the-road-ahead.html" beforeDir="false" afterPath="$PROJECT_DIR$/the-road-ahead.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/mikhail/projects/web/live-вёрстка/index.html",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mikhail/projects/web/live-вёрстка/index.html&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -86,6 +99,9 @@
       <workItem from="1708774655433" duration="14024000" />
       <workItem from="1709135135650" duration="104000" />
       <workItem from="1709204953197" duration="3087000" />
+      <workItem from="1709226179120" duration="77000" />
+      <workItem from="1709226257616" duration="6885000" />
+      <workItem from="1709233157261" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -195,5 +211,9 @@
     <MESSAGE value="Сделано &quot;Избранное&quot;, начат блок &quot;Почседние&quot;" />
     <MESSAGE value="Страница +- готова, требуется проверка" />
     <option name="LAST_COMMIT_MESSAGE" value="Страница +- готова, требуется проверка" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
