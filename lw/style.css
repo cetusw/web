@@ -29,9 +29,6 @@ ul {
     text-align: right;
     vertical-align: middle;
 }
-.top-buttons .top-buttons__button {
-    cursor: pointer;
-}
 .top-buttons li {
     display: inline-block;
     text-decoration: none;

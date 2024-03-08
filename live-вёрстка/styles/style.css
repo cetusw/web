@@ -8,19 +8,11 @@
     margin: 0 auto;
 }
 
-.navigation {
-
-}
-
 .navigation__list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
-}
-
-.navigation__item {
-
 }
 
 .navigation__link {

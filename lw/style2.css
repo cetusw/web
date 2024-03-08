@@ -3,42 +3,39 @@
   padding: 0;
 }
 
-.header {
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.header-block {
   height: 500px;
   background: url("src/images/hills.jpg") no-repeat;
   background-size: cover;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 66.7%;
-  height: 14.8%;
-  margin: 0 auto 103px auto;
+.navigation__logo {
+  position: absolute;
+  padding-top: 20px;
 }
 
-.navigation__logo {
-  height: 26px;
-  z-index: 1;
+.navigation {
+  margin: 0 auto 103px auto;
 }
 
 .navigation__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
+  flex-wrap: wrap;
   list-style-type: none;
-  width: 376px;
-  align-items: center;
-  z-index: 1;
 }
 
-.navigation__item {
+.navigation__link {
+  display: block;
+  padding: 27px 20px 27px 20px;
   text-decoration: none;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
+  font: 400 12px/20px "Oxygen", sans-serif;
   color: #ffffff;
-  line-height: 20px;
 }
 
 .header__title {
@@ -67,27 +64,14 @@
 }
 
 .header__latest {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #DD783F;
+  background-color: #dd783f;
+  border: none;
   border-radius: 3px;
   margin: 0 auto;
   width: 167px;
   height: 44px;
-}
-
-.header__latest p {
-  margin: 0;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 154%;
-  color: #fff;
-}
-
-.menu {
-  height: 65px;
+  font: 400 13px/20px "Oxygen", sans-serif;
+  color: #ffffff;
 }
 
 .menu__list {
@@ -96,21 +80,18 @@
   list-style-type: none;
   align-items: center;
   margin: 0 auto;
-  height: 100%;
-  width: 960px;
 }
 
 .menu__item {
-  font-family: "Lora", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 143%;
+  display: block;
+  font: 400 14px/20px "Lora", sans-serif;
+  padding: 23px 0 23px 0;
   text-align: center;
   color: #768088;
 }
 
 .posts {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 .posts__featured {
@@ -127,10 +108,7 @@
 .posts__title {
   padding-top: 60px;
   margin: 0 0 16px 0;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 135%;
+  font: 400 20px/27px "Oxygen", sans-serif;
   letter-spacing: 0.1em;
   text-align: center;
   color: #2e2e2e;
@@ -139,7 +117,7 @@
 .posts__divider {
   height: 1px;
   width: 188px;
-  background-color: #DEDEDE;
+  background-color: #dedede;
   margin: 0 auto 23px auto;
 }
 
@@ -151,67 +129,55 @@
   padding: 157px 20px 15px 20px;
 }
 
-.first-post h1 {
-  font-family: "Lora", sans-serif;
-  font-weight: 400;
-  font-size: 27px;
-  line-height: 111%;
-  color: #fff;
+.featured__title {
+  font: 400 27px/30px "Lora", sans-serif;
+  color: #ffffff;
   margin: 0 0 6px 0;
 }
 
-.first-post h2 {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 179%;
+.featured__subtitle {
+  font: 400 14px/25px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   margin: 0 0 12px 0;
 }
 
 .first-post__bottom-bar {
-  display: flex;
+  height: 35px;
+}
+
+.first-post__avatar {
+  display: inline;
+  float: left;
+  margin-top: 5px;
 }
 
 .first-post__name {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 292%;
+  display: inline;
+  float: left;
+  font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
-  margin: 0;
+  margin: auto 0;
   padding-left: 10px;
 }
 
 .first-post__date {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 292%;
+  display: inline;
+  float: right;
+  font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
-  padding-left: 215px;
 }
 
 .second-post__type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 2px;
   width: 87px;
   height: 26px;
-  background-color: #DD783F;
+  background-color: #dd783f;
   margin-bottom: 111px;
-}
-
-.second-post__type p {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 108%;
+  text-align: center;
+  font: 400 12px/26px "Oxygen", sans-serif;
   text-transform: uppercase;
-  color: #fff;
-  margin: 0;
+  color: #ffffff;
 }
 
 .second-post {
@@ -222,58 +188,36 @@
   padding: 20px 20px 15px 20px;
 }
 
-.second-post h1 {
-  font-family: "Lora", sans-serif;
-  font-weight: 400;
-  font-size: 27px;
-  line-height: 111%;
-  color: #fff;
-  margin: 0 0 6px 0;
-}
-
-.second-post h2 {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 179%;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 12px 0;
-}
-
 .second-post__bottom-bar {
-  display: flex;
+  height: 35px;
+}
+
+.second-post__avatar {
+  display: inline;
+  float: left;
+  margin-top: 5px;
 }
 
 .second-post__name {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 292%;
+  display: inline;
+  float: left;
+  font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
   padding-left: 10px;
 }
 
 .second-post__date {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 292%;
+  display: inline;
+  float: right;
+  font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
-  padding-left: 200px;
 }
 
 .posts__recent {
-  width: 940px;
   margin: 0 auto;
   padding-bottom: 83px;
-}
-
-.posts__blocks {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: nowrap;
 }
 
 .posts__blocks {
@@ -298,21 +242,15 @@
   padding-left: 13px;
 }
 
-.recent-post__content h1 {
-  font-family: "Lora", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 131%;
+.recent-post__title {
+  font: 400 16px/21px "Lora", sans-serif;
   color: #101315;
   margin: 0 0 6px 0;
 }
 
-.recent-post__content h2 {
+.recent-post__subtitle {
   height: 38px;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 146%;
+  font: 400 13px/19px "Oxygen", sans-serif;
   color: #7a7a7a;
   margin: 0 0 12px 0;
 }
@@ -324,35 +262,25 @@
   background-color: #EFEFEF;
 }
 
-.recent-post__bottom-bar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.recent-post__account {
-  display: flex;
-}
-
 .recent-post__avatar {
+  display: inline;
+  float: left;
   margin: 5px 0 0 13px;
-  height: 26px;
 }
 
 .recent-post__name {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 318%;
-  color: #999;
+  display: inline;
+  float: left;
+  font: 400 11px/35px "Oxygen", sans-serif;
+  color: #999999;
   width: 100px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 
 .recent-post__date {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 292%;
+  display: inline;
+  float: right;
+  font: 400 11px/35px "Oxygen", sans-serif;
   color: #999;
   margin: 0 13px 0 0;
 }
@@ -364,11 +292,23 @@
   background-blend-mode: darken;
 }
 
-.navigation_footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 66.7%;
-  margin: 0 auto 0 auto;
+.footer__logo {
+  position: absolute;
+  padding-top: 31px;
 }
+
+.footer__list {
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.footer__link {
+  display: block;
+  padding: 31px 10px 32px 10px;
+  text-decoration: none;
+  font: 400 11px/26px "Oxygen", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+

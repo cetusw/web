@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The road ahead</title>
+  <title>Blog</title>
   <link rel="stylesheet" href="style2.css">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
 </head>
 <body>
-<header class="header">
-  <div class="navigation">
+<header class="header-block">
+  <div class="navigation container">
     <img class="navigation__logo" src="src/images/escape-white.svg" alt="Error">
     <ul class="navigation__list">
       <li class="navigation__item">
@@ -30,30 +30,26 @@
   <div class="header__title">
     <h1>Let's do it together.</h1>
     <h2>We travel the world in search of stories. Come along for the ride.</h2>
-    <div class="header__latest">
-      <p>View Latest Posts</p>
-    </div>
+    <button class="header__latest">View Latest Posts</button>
   </div>
 </header>
 <main>
-  <div class="menu">
-    <ul class="menu__list">
-      <li><a class="menu__item">Nature</a></li>
-      <li><a class="menu__item">Photography</a></li>
-      <li><a class="menu__item">Relaxation</a></li>
-      <li><a class="menu__item">Vocation</a></li>
-      <li><a class="menu__item">Travel</a></li>
-      <li><a class="menu__item">Adventure</a></li>
-    </ul>
-  </div>
+  <ul class="menu__list container">
+    <li><a class="menu__item">Nature</a></li>
+    <li><a class="menu__item">Photography</a></li>
+    <li><a class="menu__item">Relaxation</a></li>
+    <li><a class="menu__item">Vocation</a></li>
+    <li><a class="menu__item">Travel</a></li>
+    <li><a class="menu__item">Adventure</a></li>
+  </ul>
   <div class="posts">
-    <div class="posts__featured">
-      <h1 class="posts__title">Featured Posts</h1>
+    <div class="posts__featured container">
+      <h2 class="posts__title">Featured Posts</h2>
       <div class="posts__divider"></div>
       <div class="posts__blocks">
         <div class="first-post">
-          <h1>The Road Ahead</h1>
-          <h2>The road ahead might be paved - it might not be.</h2>
+          <h3 class="featured__title">The Road Ahead</h3>
+          <h4 class="featured__subtitle">The road ahead might be paved - it might not be.</h4>
           <div class="first-post__bottom-bar">
             <img class="first-post__avatar" src="src/images/mat.svg" alt="Error">
             <p class="first-post__name">Mat Vogels</p>
@@ -61,11 +57,9 @@
           </div>
         </div>
         <div class="second-post">
-          <div class="second-post__type">
-            <p>ADVENTURE</p>
-          </div>
-          <h1>From Top Down</h1>
-          <h2>Once a year, go someplace you’ve never been before.</h2>
+          <div class="second-post__type">ADVENTURE</div>
+          <h3 class="featured__title">From Top Down</h3>
+          <h4 class="featured__subtitle">Once a year, go someplace you’ve never been before.</h4>
           <div class="second-post__bottom-bar">
             <img class="second-post__avatar" src="src/images/william.svg" alt="Error">
             <p class="second-post__name">William Wong</p>
@@ -74,97 +68,85 @@
         </div>
       </div>
     </div>
-    <div class="posts__recent">
-      <h1 class="posts__title">Most Recent</h1>
+    <div class="posts__recent container">
+      <h5 class="posts__title">Most Recent</h5>
       <div class="posts__divider"></div>
       <div class="posts__blocks">
         <div class="recent-post">
           <img class="recent-post__image" src="src/images/01.jpg" alt="Error">
           <div class="recent-post__content">
-            <h1>Still Standing Tall</h1>
-            <h2>Life begins at the end of your comfort zone.</h2>
+            <h5 class="recent-post__title">Still Standing Tall</h5>
+            <h6 class="recent-post__subtitle">Life begins at the end of your comfort zone.</h6>
           </div>
           <div class="recent-post__divider"></div>
           <div class="recent-post__bottom-bar">
-            <div class="recent-post__account">
-              <img class="recent-post__avatar" src="src/images/william.svg" alt="Error">
-              <p class="recent-post__name">William Wong</p>
-            </div>
+            <img class="recent-post__avatar" src="src/images/william.svg" alt="Error">
+            <p class="recent-post__name">William Wong</p>
             <p class="recent-post__date">9/25/2015</p>
           </div>
         </div>
         <div class="recent-post">
           <img class="recent-post__image" src="src/images/02.jpg" alt="Error">
           <div class="recent-post__content">
-            <h1>Sunny Side Up</h1>
-            <h2>No place is ever as bad as they tell you it’s going to be.</h2>
+            <h5 class="recent-post__title">Sunny Side Up</h5>
+            <h6 class="recent-post__subtitle">No place is ever as bad as they tell you it’s going to be.</h6>
           </div>
           <div class="recent-post__divider"></div>
           <div class="recent-post__bottom-bar">
-            <div class="recent-post__account">
-              <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
-              <p class="recent-post__name">Mat Vogels</p>
-            </div>
+            <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
+            <p class="recent-post__name">Mat Vogels</p>
             <p class="recent-post__date">9/25/2015</p>
           </div>
         </div>
         <div class="recent-post">
           <img class="recent-post__image" src="src/images/03.jpg" alt="Error">
           <div class="recent-post__content">
-            <h1>Water Falls</h1>
-            <h2>We travel not to escape life, but for life not to escape us.</h2>
+            <h5 class="recent-post__title">Water Falls</h5>
+            <h6 class="recent-post__subtitle">We travel not to escape life, but for life not to escape us.</h6>
           </div>
           <div class="recent-post__divider"></div>
           <div class="recent-post__bottom-bar">
-            <div class="recent-post__account">
-              <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
-              <p class="recent-post__name">Mat Vogels</p>
-            </div>
+            <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
+            <p class="recent-post__name">Mat Vogels</p>
             <p class="recent-post__date">9/25/2015</p>
           </div>
         </div>
         <div class="recent-post">
           <img class="recent-post__image" src="src/images/04.jpg" alt="Error">
           <div class="recent-post__content">
-            <h1>Through the Mist</h1>
-            <h2>Travel makes you see what a tiny place you occupy in the world.</h2>
+            <h5 class="recent-post__title">Through the Mist</h5>
+            <h6 class="recent-post__subtitle">Travel makes you see what a tiny place you occupy in the world.</h6>
           </div>
           <div class="recent-post__divider"></div>
           <div class="recent-post__bottom-bar">
-            <div class="recent-post__account">
-              <img class="recent-post__avatar" src="src/images/william.svg" alt="Error">
-              <p class="recent-post__name">William Wong</p>
-            </div>
+            <img class="recent-post__avatar" src="src/images/william.svg" alt="Error">
+            <p class="recent-post__name">William Wong</p>
             <p class="recent-post__date">9/25/2015</p>
           </div>
         </div>
         <div class="recent-post">
           <img class="recent-post__image" src="src/images/05.jpg" alt="Error">
           <div class="recent-post__content">
-            <h1>Awaken Early</h1>
-            <h2>Not all those who wander are lost.</h2>
+            <h5 class="recent-post__title">Awaken Early</h5>
+            <h6 class="recent-post__subtitle">Not all those who wander are lost.</h6>
           </div>
           <div class="recent-post__divider"></div>
           <div class="recent-post__bottom-bar">
-            <div class="recent-post__account">
-              <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
-              <p class="recent-post__name">Mat Vogels</p>
-            </div>
+            <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
+            <p class="recent-post__name">Mat Vogels</p>
             <p class="recent-post__date">9/25/2015</p>
           </div>
         </div>
         <div class="recent-post">
           <img class="recent-post__image" src="src/images/06.jpg" alt="Error">
           <div class="recent-post__content">
-            <h1>Try it Always</h1>
-            <h2>The world is a book, and those who do not travel read only one page.</h2>
+            <h5 class="recent-post__title">Try it Always</h5>
+            <h6 class="recent-post__subtitle">The world is a book, and those who do not travel read only one page.</h6>
           </div>
           <div class="recent-post__divider"></div>
           <div class="recent-post__bottom-bar">
-            <div class="recent-post__account">
-              <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
-              <p class="recent-post__name">Mat Vogels</p>
-            </div>
+            <img class="recent-post__avatar" src="src/images/mat.svg" alt="Error">
+            <p class="recent-post__name">Mat Vogels</p>
             <p class="recent-post__date">9/25/2015</p>
           </div>
         </div>
@@ -173,20 +155,20 @@
   </div>
 </main>
 <footer class="footer">
-  <div class="navigation_footer">
-    <img class="navigation__logo" src="src/images/escape-white.svg" alt="Error">
-    <ul class="navigation__list">
-      <li class="navigation__item">
-        <a class="navigation__link">HOME</a>
+  <div class="navigation__footer container">
+    <img class="footer__logo" src="src/images/escape-white.svg" alt="Error">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="footer__link">HOME</a>
       </li>
-      <li class="navigation__item">
-        <a class="navigation__link">CATEGORIES</a>
+      <li class="footer__item">
+        <a class="footer__link">CATEGORIES</a>
       </li>
-      <li class="navigation__item">
-        <a class="navigation__link">ABOUT</a>
+      <li class="footer__item">
+        <a class="footer__link">ABOUT</a>
       </li>
-      <li class="navigation__item">
-        <a class="navigation__link">CONTACT</a>
+      <li class="footer__item">
+        <a class="footer__link">CONTACT</a>
       </li>
     </ul>
   </div>
