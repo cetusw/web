@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Исправлен БЭМ, табуляция в коде">
-      <change beforePath="$PROJECT_DIR$/../live-вёрстка/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../live-вёрстка/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/lamp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lamp.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the-road-ahead.html" beforeDir="false" afterPath="$PROJECT_DIR$/the-road-ahead.html" afterDir="false" />
-    </list>
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сделаны правки в странице блога" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +89,7 @@
       <workItem from="1709233157261" duration="1196000" />
       <workItem from="1709270938904" duration="3375000" />
       <workItem from="1709548146330" duration="320000" />
-      <workItem from="1709890220717" duration="15481000" />
+      <workItem from="1709890220717" duration="15780000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -187,7 +179,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709233582838</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Исправлен БЭМ, табуляция в коде">
+      <option name="closed" value="true" />
+      <created>1709906300789</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709906300789</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Сделаны правки в странице блога">
+      <option name="closed" value="true" />
+      <created>1709906508864</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709906508864</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +223,8 @@
     <MESSAGE value="Сделано &quot;Избранное&quot;, начат блок &quot;Почседние&quot;" />
     <MESSAGE value="Страница +- готова, требуется проверка" />
     <MESSAGE value="Исправлен БЭМ, табуляция в коде" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен БЭМ, табуляция в коде" />
+    <MESSAGE value="Сделаны правки в странице блога" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделаны правки в странице блога" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

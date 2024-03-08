@@ -82,7 +82,7 @@
   margin: 0 auto;
 }
 
-.menu__item {
+.menu__link {
   display: block;
   font: 400 14px/20px "Lora", sans-serif;
   padding: 23px 0 23px 0;
