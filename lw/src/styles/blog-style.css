@@ -10,7 +10,7 @@
 
 .header-block {
   height: 500px;
-  background: url("../src/images/hills.jpg") no-repeat;
+  background: url("../images/hills.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -123,7 +123,7 @@
 
 .first-post {
   width: 420px;
-  background: url("../src/images/sky-small.jpg") no-repeat;
+  background: url("../images/sky-small.jpg") no-repeat;
   background-size: cover;
   border-radius: 3px;
   padding: 157px 20px 15px 20px;
@@ -182,7 +182,7 @@
 
 .second-post {
   width: 420px;
-  background: url("../src/images/lamp.jpg") no-repeat;
+  background: url("../images/lamp.jpg") no-repeat;
   background-size: cover;
   border-radius: 3px;
   padding: 20px 20px 15px 20px;
@@ -287,7 +287,7 @@
 
 .footer {
   height: 89px;
-  background: rgba(35, 47, 56, 0.6) url('../src/images/frame.svg') no-repeat;
+  background: rgba(35, 47, 56, 0.6) url('../images/frame.svg') no-repeat;
   background-size: cover;
   background-blend-mode: darken;
 }
