@@ -285,7 +285,7 @@
   margin: 0 13px 0 0;
 }
 
-.footer {
+.footer-block {
   height: 89px;
   background: rgba(35, 47, 56, 0.6) url('../images/frame.svg') no-repeat;
   background-size: cover;

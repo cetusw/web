@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>The road ahead</title>
-  <link rel="stylesheet" href="src/styles/page-style.css">
+  <link rel="stylesheet" href="static/styles/page-style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="top-bar">
-  <div class="inner-top-bar">
-    <div class="logo">
-      <img class="escape" src="src/images/escape.svg" alt="Error">
-    </div>
-    <ul class="top-buttons">
-      <li><a class="button">HOME</a></li>
-      <li><a class="button">CATEGORIES</a></li>
-      <li><a class="button">ABOUT</a></li>
-      <li><a class="button">CONTACT</a></li>
+<header class="top-bar container">
+  <img class="navigation__logo" src="static/images/escape.svg" alt="Error">
+  <div class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link">HOME</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link">CATEGORIES</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link">ABOUT</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link">CONTACT</a>
+      </li>
     </ul>
   </div>
 </header>
@@ -26,8 +32,8 @@
     <h1>The Road Ahead</h1>
     <h2>The road ahead might be paved - it might not be.</h2>
   </div>
-  <img class="sky" src="src/images/sky.svg" alt="Error">
-  <div class="text">
+  <img class="sky" src="static/images/sky.svg" alt="Error">
+  <div class="text container">
     <p>
       Dark spruce forest frowned on either side the frozen waterway. The trees had been stripped by a recent wind of
       their white covering of frost,
@@ -79,16 +85,24 @@
     </p>
   </div>
 </main>
-<footer class="bottom-bar">
-  <div class="inner-bottom-bar">
-    <div class="logo">
-      <img class="escape" src="src/images/escape-white.svg" alt="Error">
-    </div>
-    <ul class="bottom-buttons">
-      <li><a class="button">HOME</a></li>
-      <li><a class="button">CATEGORIES</a></li>
-      <li><a class="button">ABOUT</a></li>
-      <li><a class="button">CONTACT</a></li>
+<footer class="footer-block">
+  <div class="container">
+    <img class="footer__logo" src="static/images/escape-white.svg" alt="Error">
+  </div>
+  <div class="navigation__footer container">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="footer__link">HOME</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link">CATEGORIES</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link">ABOUT</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link">CONTACT</a>
+      </li>
     </ul>
   </div>
 </footer>

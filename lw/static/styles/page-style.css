@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.header-block {
+    height: 500px;
+    background: url("../images/hills.jpg") no-repeat;
+    background-size: cover;
+}
+
+.navigation__logo {
+    position: absolute;
+    padding-top: 20px;
+}
+
+.navigation {
+    text-align: right;
+    margin: 0 auto 103px auto;
+}
+
+.navigation__list {
+    list-style-type: none;
+}
+
+.navigation__item {
+    display: inline-block;
+}
+
+.navigation__link {
+    display: block;
+    padding: 27px 20px 27px 20px;
+    text-decoration: none;
+    font: 400 12px/20px "Oxygen", sans-serif;
+    color: #000000;
+}
+
+.head-article {
+    height: 159px;
+    text-align: center;
+    margin: 67px auto;
+}
+
+.head-article h1 {
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 51px;
+    color: #2e2e2e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.head-article h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(46, 46, 46, 0.63);
+    margin: 0;
+}
+
+.sky {
+    width: 100%;
+    margin-bottom: 140px;
+}
+
+.text p {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #101315;
+    margin: 0 auto 135px auto;
+}
+
+.navigation__footer {
+    text-align: right;
+}
+
+.footer-block {
+    height: 89px;
+    background: rgba(35, 47, 56, 0.6) url('../images/frame.svg') no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.footer__logo {
+    position: absolute;
+    padding-top: 31px;
+}
+
+.footer__list {
+    list-style-type: none;
+}
+
+.footer__item {
+    display: inline-block;
+}
+
+.footer__link {
+    display: block;
+    padding: 31px 10px 32px 10px;
+    text-decoration: none;
+    font: 400 11px/26px "Oxygen", sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+}
