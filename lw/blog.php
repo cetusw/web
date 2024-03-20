@@ -1,5 +1,23 @@
 <?php
-$posts = [
+$posts_featured = [
+  [
+    'title' => 'The Road Ahead',
+    'subtitle' => 'The road ahead might be paved - it might not be.',
+    'img_back' => 'static/images/sky-small.jpg',
+    'img_author' => 'static/images/mat.svg',
+    'author' => 'Mat Vogels',
+    'date' => '9/25/2015'
+  ],
+  [
+    'title' => 'From Top Down',
+    'subtitle' => 'Once a year, go someplace you’ve never been before.',
+    'img_back' => 'static/images/lamp.jpg',
+    'img_author' => 'static/images/william.svg',
+    'author' => 'William Wong',
+    'date' => '9/25/2015'
+  ]
+];
+$posts_recent = [
   [
     'title' => 'Still Standing Tall',
     'subtitle' => 'Life begins at the end of your comfort zone.',
@@ -47,7 +65,7 @@ $posts = [
     'img_author' => 'static/images/mat.svg',
     'author' => 'Mat Vogels',
     'date' => '9/25/2015'
-  ],
+  ]
 ];
 ?>
 
@@ -113,25 +131,11 @@ $posts = [
       <h2 class="posts__title">Featured Posts</h2>
       <div class="posts__divider"></div>
       <div class="posts__blocks">
-        <div class="first-post">
-          <h3 class="featured__title">The Road Ahead</h3>
-          <h4 class="featured__subtitle">The road ahead might be paved - it might not be.</h4>
-          <div class="first-post__bottom-bar">
-            <img class="first-post__avatar" src="static/images/mat.svg" alt="Error">
-            <span class="first-post__name">Mat Vogels</span>
-            <span class="first-post__date">September 25, 2015</span>
-          </div>
-        </div>
-        <div class="second-post">
-          <div class="second-post__type">ADVENTURE</div>
-          <h3 class="featured__title">From Top Down</h3>
-          <h4 class="featured__subtitle">Once a year, go someplace you’ve never been before.</h4>
-          <div class="second-post__bottom-bar">
-            <img class="second-post__avatar" src="static/images/william.svg" alt="Error">
-            <span class="second-post__name">William Wong</span>
-            <span class="second-post__date">September 25, 2015</span>
-          </div>
-        </div>
+        <?php
+        foreach ($posts_featured as $post_featured) {
+          include 'posts_featured.php';
+        }
+        ?>
       </div>
     </div>
     <div class="posts__recent container">
@@ -139,8 +143,8 @@ $posts = [
       <div class="posts__divider"></div>
       <div class="posts__blocks">
         <?php
-        foreach ($posts as $post) {
-          include 'post_preview.php';
+        foreach ($posts_recent as $post_recent) {
+          include 'posts_recent.php';
         }
         ?>
       </div>

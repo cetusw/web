@@ -121,37 +121,37 @@
   margin: 0 auto 23px auto;
 }
 
-.first-post {
-  width: 420px;
-  background: url("../images/sky-small.jpg") no-repeat;
-  background-size: cover;
-  border-radius: 3px;
+.featured-post {
   padding: 157px 20px 15px 20px;
 }
 
-.featured__title {
+.featured-post-mark {
+  padding: 15px 20px 15px 20px;
+}
+
+.featured-post__title {
   font: 400 27px/30px "Lora", sans-serif;
   color: #ffffff;
   margin: 0 0 6px 0;
 }
 
-.featured__subtitle {
+.featured-post__subtitle {
   font: 400 14px/25px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   margin: 0 0 12px 0;
 }
 
-.first-post__bottom-bar {
+.featured-post__bottom-bar {
   height: 35px;
 }
 
-.first-post__avatar {
+.featured-post__avatar {
   display: inline;
   float: left;
   margin-top: 5px;
 }
 
-.first-post__name {
+.featured-post__name {
   display: inline;
   float: left;
   font: 400 12px/35px "Oxygen", sans-serif;
@@ -160,7 +160,7 @@
   padding-left: 10px;
 }
 
-.first-post__date {
+.featured-post__date {
   display: inline;
   float: right;
   font: 400 12px/35px "Oxygen", sans-serif;
@@ -168,7 +168,7 @@
   margin: 0;
 }
 
-.second-post__type {
+.featured-post__type {
   border-radius: 2px;
   width: 87px;
   height: 26px;
@@ -178,41 +178,6 @@
   font: 400 12px/26px "Oxygen", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-.second-post {
-  width: 420px;
-  background: url("../images/lamp.jpg") no-repeat;
-  background-size: cover;
-  border-radius: 3px;
-  padding: 20px 20px 15px 20px;
-}
-
-.second-post__bottom-bar {
-  height: 35px;
-}
-
-.second-post__avatar {
-  display: inline;
-  float: left;
-  margin-top: 5px;
-}
-
-.second-post__name {
-  display: inline;
-  float: left;
-  font: 400 12px/35px "Oxygen", sans-serif;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0;
-  padding-left: 10px;
-}
-
-.second-post__date {
-  display: inline;
-  float: right;
-  font: 400 12px/35px "Oxygen", sans-serif;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0;
 }
 
 .posts__recent {
