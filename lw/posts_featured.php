@@ -1,16 +1,5 @@
-<?php
-if ($post_featured['title'] == 'From Top Down') {
-    $featured_post = 'featured-post-mark';
-} else {
-    $featured_post = 'featured-post';
-}
-?>
-
-<div class="<?php echo $featured_post; ?>"
-  style="background: url(<?= $post_featured['img_back']?>) no-repeat;
-  background-size: cover;
-  width: 420px;
-  border-radius: 3px;">
+<div class="featured-post"
+  style="background: url(<?= $post_featured['img_back']?>) no-repeat;">
   <?php
   if ($post_featured['title'] == 'From Top Down') {
     echo '<div class="featured-post__type">ADVENTURE</div>';

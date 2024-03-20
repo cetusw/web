@@ -123,10 +123,10 @@
 
 .featured-post {
   padding: 157px 20px 15px 20px;
-}
-
-.featured-post-mark {
-  padding: 15px 20px 15px 20px;
+  position: relative;
+  background-size: cover;
+  width: 420px;
+  border-radius: 3px;
 }
 
 .featured-post__title {
@@ -173,7 +173,9 @@
   width: 87px;
   height: 26px;
   background-color: #dd783f;
-  margin-bottom: 111px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
   text-align: center;
   font: 400 12px/26px "Oxygen", sans-serif;
   text-transform: uppercase;
