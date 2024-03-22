@@ -1,70 +1,80 @@
 <?php
+$post_recent_date = date("n/j/Y", mktime(1, 0, 0, 9, 25, 2015));
+$post_featured_date = date("F d, Y", mktime(1, 0, 0, 9, 25, 2015));
 $posts_featured = [
   [
+    'id' => 1,
     'title' => 'The Road Ahead',
     'subtitle' => 'The road ahead might be paved - it might not be.',
-    'img_back' => 'static/images/sky-small.jpg',
-    'img_author' => 'static/images/mat.svg',
+    'img_back' => 'src/images/sky-small.jpg',
+    'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => '9/25/2015'
+    'date' => $post_featured_date
   ],
   [
+    'id' => 2,
     'title' => 'From Top Down',
     'subtitle' => 'Once a year, go someplace you’ve never been before.',
-    'img_back' => 'static/images/lamp.jpg',
-    'img_author' => 'static/images/william.svg',
+    'img_back' => 'src/images/lamp.jpg',
+    'img_author' => 'src/images/william.svg',
     'author' => 'William Wong',
-    'date' => '9/25/2015'
+    'date' => $post_featured_date
   ]
 ];
 $posts_recent = [
   [
+    'id' => 3,
     'title' => 'Still Standing Tall',
     'subtitle' => 'Life begins at the end of your comfort zone.',
-    'img_back' => 'static/images/01.jpg',
-    'img_author' => 'static/images/william.svg',
+    'img_back' => 'src/images/01.jpg',
+    'img_author' => 'src/images/william.svg',
     'author' => 'William Wong',
-    'date' => '9/25/2015'
+    'date' => $post_recent_date
   ],
   [
+    'id' => 4,
     'title' => 'Sunny Side Up',
     'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
-    'img_back' => 'static/images/02.jpg',
-    'img_author' => 'static/images/mat.svg',
+    'img_back' => 'src/images/02.jpg',
+    'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => '9/25/2015'
+    'date' => $post_recent_date
   ],
   [
+    'id' => 5,
     'title' => 'Water Falls',
     'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-    'img_back' => 'static/images/03.jpg',
-    'img_author' => 'static/images/mat.svg',
+    'img_back' => 'src/images/03.jpg',
+    'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => '9/25/2015'
+    'date' => $post_recent_date
   ],
   [
+    'id' => 6,
     'title' => 'Through the Mist',
     'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-    'img_back' => 'static/images/04.jpg',
-    'img_author' => 'static/images/william.svg',
+    'img_back' => 'src/images/04.jpg',
+    'img_author' => 'src/images/william.svg',
     'author' => 'William Wong',
-    'date' => '9/25/2015'
+    'date' => $post_recent_date
   ],
   [
+    'id' => 7,
     'title' => 'Awaken Early',
     'subtitle' => 'Not all those who wander are lost.',
-    'img_back' => 'static/images/05.jpg',
-    'img_author' => 'static/images/mat.svg',
+    'img_back' => 'src/images/05.jpg',
+    'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => '9/25/2015'
+    'date' => $post_recent_date
   ],
   [
+    'id' => 8,
     'title' => 'Try it Always',
     'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-    'img_back' => 'static/images/06.jpg',
-    'img_author' => 'static/images/mat.svg',
+    'img_back' => 'src/images/06.jpg',
+    'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => '9/25/2015'
+    'date' => $post_recent_date
   ]
 ];
 ?>
@@ -76,14 +86,14 @@ $posts_recent = [
 <head>
   <meta charset="UTF-8">
   <title>Blog</title>
-  <link rel="stylesheet" href="static/styles/blog-style.css">
+  <link rel="stylesheet" href="src/styles/blog-style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header-block">
   <div class="navigation container">
-    <img class="navigation__logo" src="static/images/escape-white.svg" alt="Error">
+    <img class="navigation__logo" src="src/images/escape-white.svg" alt="Error">
     <ul class="navigation__list">
       <li class="navigation__item">
         <a class="navigation__link">HOME</a>
@@ -99,10 +109,10 @@ $posts_recent = [
       </li>
     </ul>
   </div>
-  <div class="header__title">
+  <div class="header-block__title">
     <h1>Let's do it together.</h1>
     <h2>We travel the world in search of stories. Come along for the ride.</h2>
-    <button class="header__latest">View Latest Posts</button>
+    <button class="header-block__latest">View Latest Posts</button>
   </div>
 </header>
 <main>
@@ -152,20 +162,20 @@ $posts_recent = [
   </div>
 </main>
 <footer class="footer-block">
-  <div class="navigation__footer container">
-    <img class="footer__logo" src="static/images/escape-white.svg" alt="Error">
-    <ul class="footer__list">
-      <li class="footer__item">
-        <a class="footer__link">HOME</a>
+  <div class="navigation__footer-block container">
+    <img class="footer-block__logo" src="src/images/escape-white.svg" alt="Error">
+    <ul class="footer-block__list">
+      <li class="footer-block__item">
+        <a class="footer-block__link">HOME</a>
       </li>
-      <li class="footer__item">
-        <a class="footer__link">CATEGORIES</a>
+      <li class="footer-block__item">
+        <a class="footer-block__link">CATEGORIES</a>
       </li>
-      <li class="footer__item">
-        <a class="footer__link">ABOUT</a>
+      <li class="footer-block__item">
+        <a class="footer-block__link">ABOUT</a>
       </li>
-      <li class="footer__item">
-        <a class="footer__link">CONTACT</a>
+      <li class="footer-block__item">
+        <a class="footer-block__link">CONTACT</a>
       </li>
     </ul>
   </div>

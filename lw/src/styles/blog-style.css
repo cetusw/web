@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .container {
@@ -42,7 +43,7 @@
   text-align: center;
 }
 
-.header__title h1 {
+.header-block__title h1 {
   font-family: "Lora", sans-serif;
   font-weight: 400;
   font-size: 50px;
@@ -53,7 +54,7 @@
   letter-spacing: 2px;
 }
 
-.header__title h2 {
+.header-block__title h2 {
   font-family: "Oxygen", sans-serif;
   font-weight: 400;
   font-size: 17px;
@@ -63,7 +64,7 @@
   color: rgba(255, 255, 255, 0.63);
 }
 
-.header__latest {
+.header-block__latest {
   background-color: #dd783f;
   border: none;
   border-radius: 3px;
@@ -136,9 +137,11 @@
 }
 
 .featured-post__subtitle {
+  display: block;
   font: 400 14px/25px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   margin: 0 0 12px 0;
+  text-decoration: none;
 }
 
 .featured-post__bottom-bar {
@@ -216,7 +219,9 @@
 }
 
 .recent-post__subtitle {
+  display: block;
   height: 38px;
+  width: 280px;
   font: 400 13px/19px "Oxygen", sans-serif;
   color: #7a7a7a;
   margin: 0 0 12px 0;
@@ -259,19 +264,19 @@
   background-blend-mode: darken;
 }
 
-.footer__logo {
+.footer-block__logo {
   position: absolute;
   padding-top: 31px;
 }
 
-.footer__list {
+.footer-block__list {
   display: flex;
   justify-content: right;
   flex-wrap: wrap;
   list-style-type: none;
 }
 
-.footer__link {
+.footer-block__link {
   display: block;
   padding: 31px 10px 32px 10px;
   text-decoration: none;
