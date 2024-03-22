@@ -10,7 +10,7 @@
   <div class="recent-post__bottom-bar">
     <img class="recent-post__avatar" src="<?= $post_recent['img_author'] ?>" alt="Error">
     <span class="recent-post__name"><?= $post_recent['author'] ?></span>
-    <span class="recent-post__date"><?= $post_recent['date'] ?></span>
+    <span class="recent-post__date"><?= date("n/j/Y", $post_recent['date']) ?></span>
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 <div class="featured-post"
   style="background: url(<?= $post_featured['img_back']?>) no-repeat;">
   <?php
-  if ($post_featured['title'] == 'From Top Down') {
+  if ($post_featured['adventure']) {
     echo '<div class="featured-post__type">ADVENTURE</div>';
   }
   ?>
@@ -12,7 +12,7 @@
   <div class="featured-post__bottom-bar">
     <img class="featured-post__avatar" src="<?= $post_featured['img_author'] ?>" alt="Error">
     <span class="featured-post__name"><?= $post_featured['author'] ?></span>
-    <span class="featured-post__date"><?= $post_featured['date'] ?></span>
+    <span class="featured-post__date"><?= date("F d, Y", $post_featured['date']) ?></span>
   </div>
 
 </div>

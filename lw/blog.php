@@ -1,6 +1,5 @@
 <?php
-$post_recent_date = date("n/j/Y", mktime(1, 0, 0, 9, 25, 2015));
-$post_featured_date = date("F d, Y", mktime(1, 0, 0, 9, 25, 2015));
+$post_date = mktime(1, 0, 0, 9, 25, 2015);
 $posts_featured = [
   [
     'id' => 1,
@@ -9,7 +8,8 @@ $posts_featured = [
     'img_back' => 'src/images/sky-small.jpg',
     'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => $post_featured_date
+    'date' => $post_date,
+    'adventure' => false
   ],
   [
     'id' => 2,
@@ -18,7 +18,8 @@ $posts_featured = [
     'img_back' => 'src/images/lamp.jpg',
     'img_author' => 'src/images/william.svg',
     'author' => 'William Wong',
-    'date' => $post_featured_date
+    'date' => $post_date,
+	'adventure' => true
   ]
 ];
 $posts_recent = [
@@ -29,7 +30,7 @@ $posts_recent = [
     'img_back' => 'src/images/01.jpg',
     'img_author' => 'src/images/william.svg',
     'author' => 'William Wong',
-    'date' => $post_recent_date
+    'date' => $post_date
   ],
   [
     'id' => 4,
@@ -38,7 +39,7 @@ $posts_recent = [
     'img_back' => 'src/images/02.jpg',
     'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => $post_recent_date
+    'date' => $post_date
   ],
   [
     'id' => 5,
@@ -47,7 +48,7 @@ $posts_recent = [
     'img_back' => 'src/images/03.jpg',
     'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => $post_recent_date
+    'date' => $post_date
   ],
   [
     'id' => 6,
@@ -56,7 +57,7 @@ $posts_recent = [
     'img_back' => 'src/images/04.jpg',
     'img_author' => 'src/images/william.svg',
     'author' => 'William Wong',
-    'date' => $post_recent_date
+    'date' => $post_date
   ],
   [
     'id' => 7,
@@ -65,7 +66,7 @@ $posts_recent = [
     'img_back' => 'src/images/05.jpg',
     'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => $post_recent_date
+    'date' => $post_date
   ],
   [
     'id' => 8,
@@ -74,7 +75,7 @@ $posts_recent = [
     'img_back' => 'src/images/06.jpg',
     'img_author' => 'src/images/mat.svg',
     'author' => 'Mat Vogels',
-    'date' => $post_recent_date
+    'date' => $post_date
   ]
 ];
 ?>
