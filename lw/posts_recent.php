@@ -1,16 +1,16 @@
 <div class="recent-post">
-  <img class="recent-post__image" src="<?= $post_recent['img_back']?>" alt="Error">
+  <img class="recent-post__image" src="<?= $post['image_url']?>" alt="Error">
   <div class="recent-post__content">
-    <h5 class="recent-post__title"><?= $post_recent['title']?></h5>
-    <a title='<?= $post_recent['title'] ?>' href='/post?id=<?= $post_recent['id'] ?>' class="recent-post__subtitle">
-      <?= $post_recent['subtitle'] ?>
+    <h5 class="recent-post__title"><?= $post['title']?></h5>
+    <a title='<?= $post['title'] ?>' href='/post?id=<?= $post['id'] ?>' class="recent-post__subtitle">
+      <?= $post['subtitle'] ?>
     </a>
   </div>
   <div class="recent-post__divider"></div>
   <div class="recent-post__bottom-bar">
-    <img class="recent-post__avatar" src="<?= $post_recent['img_author'] ?>" alt="Error">
-    <span class="recent-post__name"><?= $post_recent['author'] ?></span>
-    <span class="recent-post__date"><?= date("n/j/Y", $post_recent['date']) ?></span>
+    <img class="recent-post__avatar" src="<?= $post['author_url'] ?>" alt="Error">
+    <span class="recent-post__name"><?= $post['author'] ?></span>
+    <span class="recent-post__date"><?= date("n/j/Y", $post['publish_date']) ?></span>
   </div>
 </div>
 

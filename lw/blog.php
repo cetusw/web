@@ -1,86 +1,31 @@
 <?php
-$post_date = mktime(1, 0, 0, 9, 25, 2015);
-$posts_featured = [
-  [
-    'id' => 1,
-    'title' => 'The Road Ahead',
-    'subtitle' => 'The road ahead might be paved - it might not be.',
-    'img_back' => 'src/images/sky-small.jpg',
-    'img_author' => 'src/images/mat.svg',
-    'author' => 'Mat Vogels',
-    'date' => $post_date,
-    'adventure' => false
-  ],
-  [
-    'id' => 2,
-    'title' => 'From Top Down',
-    'subtitle' => 'Once a year, go someplace you’ve never been before.',
-    'img_back' => 'src/images/lamp.jpg',
-    'img_author' => 'src/images/william.svg',
-    'author' => 'William Wong',
-    'date' => $post_date,
-	'adventure' => true
-  ]
-];
-$posts_recent = [
-  [
-    'id' => 3,
-    'title' => 'Still Standing Tall',
-    'subtitle' => 'Life begins at the end of your comfort zone.',
-    'img_back' => 'src/images/01.jpg',
-    'img_author' => 'src/images/william.svg',
-    'author' => 'William Wong',
-    'date' => $post_date
-  ],
-  [
-    'id' => 4,
-    'title' => 'Sunny Side Up',
-    'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
-    'img_back' => 'src/images/02.jpg',
-    'img_author' => 'src/images/mat.svg',
-    'author' => 'Mat Vogels',
-    'date' => $post_date
-  ],
-  [
-    'id' => 5,
-    'title' => 'Water Falls',
-    'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-    'img_back' => 'src/images/03.jpg',
-    'img_author' => 'src/images/mat.svg',
-    'author' => 'Mat Vogels',
-    'date' => $post_date
-  ],
-  [
-    'id' => 6,
-    'title' => 'Through the Mist',
-    'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-    'img_back' => 'src/images/04.jpg',
-    'img_author' => 'src/images/william.svg',
-    'author' => 'William Wong',
-    'date' => $post_date
-  ],
-  [
-    'id' => 7,
-    'title' => 'Awaken Early',
-    'subtitle' => 'Not all those who wander are lost.',
-    'img_back' => 'src/images/05.jpg',
-    'img_author' => 'src/images/mat.svg',
-    'author' => 'Mat Vogels',
-    'date' => $post_date
-  ],
-  [
-    'id' => 8,
-    'title' => 'Try it Always',
-    'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-    'img_back' => 'src/images/06.jpg',
-    'img_author' => 'src/images/mat.svg',
-    'author' => 'Mat Vogels',
-    'date' => $post_date
-  ]
-];
+const HOST = 'localhost';
+const USERNAME = 'yogurt';
+const PASSWORD = 'pAssw0rd#';
+const DATABASE = 'blog';
+
+function createDBConnection(): mysqli {
+  $conn = new mysqli(HOST, USERNAME, PASSWORD, DATABASE);
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  return $conn;
+}
+
+function closeDBConnection(mysqli $conn): void {
+  $conn->close();
+}
+
+function getPost(mysqli $conn): mysqli_result {
+	$sql = "SELECT * FROM post";
+	return $conn->query($sql);
+}
+
+$connection = createDBConnection();
+$posts = getPost($connection);
+closeDBConnection($connection);
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,10 +39,10 @@ $posts_recent = [
 <body>
 <header class="header-block">
   <div class="navigation container">
-    <img class="navigation__logo" src="src/images/escape-white.svg" alt="Error">
+    <a href="/home"><img class="navigation__logo" src="src/images/escape-white.svg" alt="Error"></a>
     <ul class="navigation__list">
       <li class="navigation__item">
-        <a class="navigation__link">HOME</a>
+        <a class="navigation__link" href="/home">HOME</a>
       </li>
       <li class="navigation__item">
         <a class="navigation__link">CATEGORIES</a>
@@ -142,32 +87,36 @@ $posts_recent = [
       <h2 class="posts__title">Featured Posts</h2>
       <div class="posts__divider"></div>
       <div class="posts__blocks">
-        <?php
-        foreach ($posts_featured as $post_featured) {
-          include 'posts_featured.php';
-        }
-        ?>
+	      <?php
+          foreach ($posts as $post) {
+              if ($post['featured'] == 1) {
+                  include 'posts_featured.php';
+              }
+          }
+	      ?>
       </div>
     </div>
     <div class="posts__recent container">
       <h5 class="posts__title">Most Recent</h5>
       <div class="posts__divider"></div>
       <div class="posts__blocks">
-        <?php
-        foreach ($posts_recent as $post_recent) {
-          include 'posts_recent.php';
-        }
-        ?>
+	      <?php
+	      foreach ($posts as $post) {
+		      if ($post['featured'] == 0) {
+			      include 'posts_recent.php';
+		      }
+	      }
+	      ?>
       </div>
     </div>
   </div>
 </main>
 <footer class="footer-block">
   <div class="navigation__footer-block container">
-    <img class="footer-block__logo" src="src/images/escape-white.svg" alt="Error">
+    <a href="/home"><img class="footer-block__logo" src="src/images/escape-white.svg" alt="Error"></a>
     <ul class="footer-block__list">
       <li class="footer-block__item">
-        <a class="footer-block__link">HOME</a>
+        <a class="footer-block__link" href="/home">HOME</a>
       </li>
       <li class="footer-block__item">
         <a class="footer-block__link">CATEGORIES</a>

@@ -1,22 +1,35 @@
 <?php
-
 $method = $_SERVER['REQUEST_METHOD'];
+echo $method;
 
-if ($method == 'POST') {
-	$data = file_get_contents('php://input');
-	$imageData = json_decode($data, true);
+function saveFile(string $file, string $data): void
+{
+	$myFile = fopen($file, 'w');
 
-	if ($imageData && isset($imageData['image'])) {
-		$imageBase64 = $imageData['image'];
-		$image = base64_decode($imageBase64);
-
-		$fileName = '/src/images/image_' . uniqid() . '.jpg';
-		file_put_contents($fileName, $image);
-
-		echo "Image saved successfully as: $fileName";
-	} else {
-		echo "Invalid JSON data or missing 'image' key";
+	if (!$myFile) {
+		echo 'Произошла ошибка при открытии файла';
+		return;
 	}
-} else {
-	echo "Only POST requests are allowed";
+
+	$result = fwrite($myFile, $data);
+
+	if (!$result) {
+		echo 'Произошла ошибка при сохранении данных в файл';
+		return;
+	}
+
+	echo 'Данные успешно сохранены в файл';
+	fclose($myFile);
 }
+
+function saveImage(string $imageBase64)
+{
+	$imageBase64Array = explode(';base64,', $imageBase64);
+	$imgExtension = str_replace('data:image/', '', $imageBase64Array[0]);
+	$imageDecoded = base64_decode($imageBase64Array[1]);
+	saveFile(__DIR__ . "src/images/{$imgExtension}", $imageDecoded);
+}
+
+$dataAsJson = file_get_contents("php://input");
+$dataAsArray = json_decode($dataAsJson, true);
+saveImage($dataAsArray['image']);
