@@ -1,6 +1,5 @@
 <?php
 $method = $_SERVER['REQUEST_METHOD'];
-echo $method;
 
 function saveFile(string $file, string $data): void
 {
