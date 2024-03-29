@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Создана база данных и реализована выдача контента из неё" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cetusw&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="39a8fc91-21c0-4445-beae-1f4c10cbe97d" />
+        <option name="url" value="https://github.com/cetusw/web.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2cMvqWAw22YPK4tfuUnLMWK8Dax" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/var/www/web&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15026.12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="" />
+      <created>1707934452727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707934452727</updated>
+      <workItem from="1707934453730" duration="8387000" />
+      <workItem from="1707988911637" duration="2867000" />
+      <workItem from="1707994205771" duration="4159000" />
+      <workItem from="1708021619541" duration="2228000" />
+      <workItem from="1708061565082" duration="5245000" />
+      <workItem from="1708079658949" duration="2515000" />
+      <workItem from="1708107866824" duration="9684000" />
+      <workItem from="1708169375422" duration="3635000" />
+      <workItem from="1708457451283" duration="297000" />
+      <workItem from="1708529215582" duration="1206000" />
+      <workItem from="1708587121386" duration="2247000" />
+      <workItem from="1708590823002" duration="6092000" />
+      <workItem from="1708681567606" duration="22010000" />
+      <workItem from="1708774655433" duration="14024000" />
+      <workItem from="1709135135650" duration="104000" />
+      <workItem from="1709204953197" duration="3087000" />
+      <workItem from="1709226179120" duration="77000" />
+      <workItem from="1709226257616" duration="6885000" />
+      <workItem from="1709233157261" duration="1196000" />
+      <workItem from="1709270938904" duration="3375000" />
+      <workItem from="1709548146330" duration="320000" />
+      <workItem from="1709890220717" duration="15780000" />
+      <workItem from="1710963565190" duration="42000" />
+      <workItem from="1710968281659" duration="48000" />
+      <workItem from="1710968330479" duration="46000" />
+      <workItem from="1710968445511" duration="1462000" />
+      <workItem from="1711004664754" duration="2715000" />
+      <workItem from="1711009976664" duration="334000" />
+      <workItem from="1711038568762" duration="5227000" />
+      <workItem from="1711043838627" duration="11401000" />
+      <workItem from="1711079603901" duration="2713000" />
+      <workItem from="1711084518837" duration="6406000" />
+      <workItem from="1711180277009" duration="60000" />
+      <workItem from="1711187591947" duration="2040000" />
+      <workItem from="1711363436355" duration="317000" />
+      <workItem from="1711640316670" duration="15234000" />
+      <workItem from="1711684509679" duration="15129000" />
+    </task>
+    <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
+      <option name="closed" value="true" />
+      <created>1707942780868</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707942780868</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Добавлены шапка, картинки, текст, подвал">
+      <option name="closed" value="true" />
+      <created>1707942855397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707942855397</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Страница готова, требуется проверка">
+      <option name="closed" value="true" />
+      <created>1708023548074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708023548074</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Переделана шапка">
+      <option name="closed" value="true" />
+      <created>1708115777277</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708115777277</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавлено немного адаптивности, исправлен подвал по анологии с шапкой">
+      <option name="closed" value="true" />
+      <created>1708170678070</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708170678070</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Подвал затемнён">
+      <option name="closed" value="true" />
+      <created>1708529821294</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708529821295</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавлен новый проект, в старом исправлен margin у картинки">
+      <option name="closed" value="true" />
+      <created>1708614752276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708614752276</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Полностью сделана шапка, начат блок с постами">
+      <option name="closed" value="true" />
+      <created>1708713085206</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708713085206</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Сделано &quot;Избранное&quot;, начат блок &quot;Почседние&quot;">
+      <option name="closed" value="true" />
+      <created>1708792273585</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708792273585</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Страница +- готова, требуется проверка">
+      <option name="closed" value="true" />
+      <created>1708796127740</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796127740</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Исправлен БЭМ, табуляция в коде">
+      <option name="closed" value="true" />
+      <created>1709233582838</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709233582838</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Исправлен БЭМ, табуляция в коде">
+      <option name="closed" value="true" />
+      <created>1709906300789</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709906300789</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Сделаны правки в странице блога">
+      <option name="closed" value="true" />
+      <created>1709906508864</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709906508864</updated>
+    </task>
+    <task id="LOCAL-00014" summary="маркировка &quot;ADVENTURE&quot;, выдача из массива">
+      <option name="closed" value="true" />
+      <created>1710969866339</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710969866339</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Выдача контенты из массива при помощи GET, ссылки">
+      <option name="closed" value="true" />
+      <created>1711086924241</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711086924241</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Создана база данных и реализована выдача контента из неё">
+      <option name="closed" value="true" />
+      <created>1711740921523</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1711740921523</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="Добавлены шапка, картинки, текст, подвал" />
+    <MESSAGE value="Страница готова, требуется проверка" />
+    <MESSAGE value="Переделана шапка" />
+    <MESSAGE value="Добавлено немного адаптивности, исправлен подвал по анологии с шапкой" />
+    <MESSAGE value="Подвал затемнён" />
+    <MESSAGE value="Добавлен новый проект, в старом исправлен margin у картинки" />
+    <MESSAGE value="Полностью сделана шапка, начат блок с постами" />
+    <MESSAGE value="Сделано &quot;Избранное&quot;, начат блок &quot;Почседние&quot;" />
+    <MESSAGE value="Страница +- готова, требуется проверка" />
+    <MESSAGE value="Исправлен БЭМ, табуляция в коде" />
+    <MESSAGE value="Сделаны правки в странице блога" />
+    <MESSAGE value="маркировка &quot;ADVENTURE&quot;, выдача из массива" />
+    <MESSAGE value="Выдача контенты из массива при помощи GET, ссылки" />
+    <MESSAGE value="Создана база данных и реализована выдача контента из неё" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создана база данных и реализована выдача контента из неё" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
