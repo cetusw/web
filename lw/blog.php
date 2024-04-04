@@ -32,14 +32,14 @@ closeDBConnection($connection);
 <head>
   <meta charset="UTF-8">
   <title>Blog</title>
-  <link rel="stylesheet" href="src/styles/blog-style.css">
+  <link rel="stylesheet" href="static/styles/blog-style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header-block">
   <div class="navigation container">
-    <a href="/home"><img class="navigation__logo" src="src/images/escape-white.svg" alt="Error"></a>
+    <a href="/home"><img class="navigation__logo" src="static/images/escape-white.svg" alt="Error"></a>
     <ul class="navigation__list">
       <li class="navigation__item">
         <a class="navigation__link" href="/home">HOME</a>
@@ -113,7 +113,7 @@ closeDBConnection($connection);
 </main>
 <footer class="footer-block">
   <div class="navigation__footer-block container">
-    <a href="/home"><img class="footer-block__logo" src="src/images/escape-white.svg" alt="Error"></a>
+    <a href="/home"><img class="footer-block__logo" src="static/images/escape-white.svg" alt="Error"></a>
     <ul class="footer-block__list">
       <li class="footer-block__item">
         <a class="footer-block__link" href="/home">HOME</a>

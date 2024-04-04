@@ -1,3 +1,4 @@
+USE blog;
 INSERT INTO
     post (
           id,
@@ -63,9 +64,9 @@ VALUES (
               might of a world as remote and alien
               and pulseless as the abysses of space.',
         'Mat Vogels',
-        'src/images/mat.svg',
+        'static/images/mat.svg',
         1443171600,
-        'src/images/sky-small.jpg',
+        'static/images/sky-small.jpg',
         1,
         0
 );
@@ -89,9 +90,9 @@ VALUES (
         'Once a year, go someplace you’ve never been before.',
         '',
         'William Wong',
-        'src/images/william.svg',
+        'static/images/william.svg',
         1443171600,
-        'src/images/lamp.jpg',
+        'static/images/lamp.jpg',
         1,
         1
 );
@@ -110,17 +111,17 @@ INSERT INTO
     adventure
 )
 VALUES (
-           3,
-           'Still Standing Tall',
-           'Life begins at the end of your comfort zone.',
-           '',
-           'William Wong',
-           'src/images/william.svg',
-           1443171600,
-           'src/images/01.jpg',
-           0,
-           0
-       );
+    3,
+    'Still Standing Tall',
+    'Life begins at the end of your comfort zone.',
+    '',
+    'William Wong',
+    'static/images/william.svg',
+    1443171600,
+    'static/images/01.jpg',
+    0,
+    0
+);
 
 INSERT INTO
     post (
@@ -136,17 +137,17 @@ INSERT INTO
     adventure
 )
 VALUES (
-           4,
-           'Sunny Side Up',
-           'No place is ever as bad as they tell you it’s going to be.',
-           '',
-           'Mat Vogels',
-           'src/images/mat.svg',
-           1443171600,
-           'src/images/02.jpg',
-           0,
-           0
-       );
+    4,
+    'Sunny Side Up',
+    'No place is ever as bad as they tell you it’s going to be.',
+    '',
+    'Mat Vogels',
+    'static/images/mat.svg',
+    1443171600,
+    'static/images/02.jpg',
+    0,
+    0
+);
 
 INSERT INTO
     post (
@@ -162,17 +163,17 @@ INSERT INTO
     adventure
 )
 VALUES (
-           5,
-           'Water Falls',
-           'We travel not to escape life, but for life not to escape us.',
-           '',
-           'Mat Vogels',
-           'src/images/mat.svg',
-           1443171600,
-           'src/images/03.jpg',
-           0,
-           0
-       );
+    5,
+    'Water Falls',
+    'We travel not to escape life, but for life not to escape us.',
+    '',
+    'Mat Vogels',
+    'static/images/mat.svg',
+    1443171600,
+    'static/images/03.jpg',
+    0,
+    0
+);
 
 INSERT INTO
     post (
@@ -188,17 +189,17 @@ INSERT INTO
     adventure
 )
 VALUES (
-           6,
-           'Through the Mist',
-           'Travel makes you see what a tiny place you occupy in the world.',
-           '',
-           'William Wong',
-           'src/images/william.svg',
-           1443171600,
-           'src/images/04.jpg',
-           0,
-           0
-       );
+    6,
+    'Through the Mist',
+    'Travel makes you see what a tiny place you occupy in the world.',
+    '',
+    'William Wong',
+    'static/images/william.svg',
+    1443171600,
+    'static/images/04.jpg',
+    0,
+    0
+);
 
 INSERT INTO
     post (
@@ -214,17 +215,17 @@ INSERT INTO
     adventure
 )
 VALUES (
-           7,
-           'Awaken Early',
-           'Not all those who wander are lost.',
-           '',
-           'Mat Vogels',
-           'src/images/mat.svg',
-           1443171600,
-           'src/images/05.jpg',
-           0,
-           0
-       );
+    7,
+    'Awaken Early',
+    'Not all those who wander are lost.',
+    '',
+    'Mat Vogels',
+    'static/images/mat.svg',
+    1443171600,
+    'static/images/05.jpg',
+    0,
+    0
+);
 
 INSERT INTO
     post (
@@ -240,14 +241,14 @@ INSERT INTO
     adventure
 )
 VALUES (
-           8,
-           'Try it Always',
-           'The world is a book, and those who do not travel read only one page.',
-           '',
-           'Mat Vogels',
-           'src/images/mat.svg',
-           1443171600,
-           'src/images/06.jpg',
-           0,
-           0
-       );
+    8,
+    'Try it Always',
+    'The world is a book, and those who do not travel read only one page.',
+    '',
+    'Mat Vogels',
+    'static/images/mat.svg',
+    1443171600,
+    'static/images/06.jpg',
+    0,
+    0
+);

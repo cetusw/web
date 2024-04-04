@@ -1,24 +1,18 @@
 <?php
-$method = $_SERVER['REQUEST_METHOD'];
-
 function saveFile(string $file, string $data): void
 {
 	$myFile = fopen($file, 'w');
-
-	if (!$myFile) {
+	if ($myFile) {
+		$result = fwrite($myFile, $data);
+		if ($result) {
+			echo 'Данные успешно сохранены в файл';
+		} else {
+			echo 'Произошла ошибка при сохранении данных в файл';
+		}
+		fclose($myFile);
+	} else {
 		echo 'Произошла ошибка при открытии файла';
-		return;
 	}
-
-	$result = fwrite($myFile, $data);
-
-	if (!$result) {
-		echo 'Произошла ошибка при сохранении данных в файл';
-		return;
-	}
-
-	echo 'Данные успешно сохранены в файл';
-	fclose($myFile);
 }
 
 function saveImage(string $imageBase64)
@@ -26,9 +20,14 @@ function saveImage(string $imageBase64)
 	$imageBase64Array = explode(';base64,', $imageBase64);
 	$imgExtension = str_replace('data:image/', '', $imageBase64Array[0]);
 	$imageDecoded = base64_decode($imageBase64Array[1]);
-	saveFile(__DIR__ . "src/images/{$imgExtension}", $imageDecoded);
+	saveFile(__DIR__ . "/src/images/image.{$imgExtension}", $imageDecoded);
 }
 
-$dataAsJson = file_get_contents("php://input");
-$dataAsArray = json_decode($dataAsJson, true);
-saveImage($dataAsArray['image']);
+$method = $_SERVER['REQUEST_METHOD'];
+if ($method == 'POST') {
+	$dataAsJson = file_get_contents("php://input");
+	$dataAsArray = json_decode($dataAsJson, true);
+	saveImage($dataAsArray['image']);
+} else {
+	echo 'Метод не POST';
+}

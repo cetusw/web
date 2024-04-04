@@ -49,13 +49,13 @@ foreach ($posts as $post) {
 <head>
   <meta charset="UTF-8">
   <title><?= $title ?></title>
-  <link rel="stylesheet" href="src/styles/post-style.css">
+  <link rel="stylesheet" href="static/styles/post-style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="top-bar container">
-  <a href="/home"><img class="navigation__logo" src="src/images/escape.svg" alt="Error"></a>
+  <a href="/home"><img class="navigation__logo" src="static/images/escape.svg" alt="Error"></a>
   <div class="navigation">
     <ul class="navigation__list">
       <li class="navigation__item">
@@ -91,7 +91,7 @@ foreach ($posts as $post) {
 </main>
 <footer class="footer-block">
   <div class="container">
-    <img class="footer__logo" src="src/images/escape-white.svg" alt="Error">
+    <img class="footer__logo" src="static/images/escape-white.svg" alt="Error">
   </div>
   <div class="navigation__footer container">
     <ul class="footer__list">
