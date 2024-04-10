@@ -204,6 +204,8 @@
 }
 
 .recent-post__image {
+  width: 296px;
+  height: 150px;
   vertical-align: top;
   margin-bottom: 14px;
 }
@@ -235,6 +237,9 @@
 }
 
 .recent-post__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
   display: inline;
   float: left;
   margin: 5px 0 0 13px;

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сохранение картинки через api">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сохранение поста через json в базу данных (без картинок)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/blog-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blog-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1709270938904" duration="3375000" />
       <workItem from="1709548146330" duration="320000" />
       <workItem from="1709890220717" duration="15780000" />
-      <workItem from="1712755696674" duration="4855000" />
+      <workItem from="1712755696674" duration="10396000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -213,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712755746585</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Сохранение поста через json в базу данных (без картинок)">
+      <option name="closed" value="true" />
+      <created>1712760770971</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712760770971</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +251,8 @@
     <MESSAGE value="Исправлен БЭМ, табуляция в коде" />
     <MESSAGE value="Сделаны правки в странице блога" />
     <MESSAGE value="Сохранение картинки через api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сохранение картинки через api" />
+    <MESSAGE value="Сохранение поста через json в базу данных (без картинок)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сохранение поста через json в базу данных (без картинок)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

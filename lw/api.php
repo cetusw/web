@@ -21,12 +21,16 @@ function saveFile(string $file, string $data): void
 	}
 }
 
-function saveImage(string $imageBase64)
+function saveImage(string $imageBase64, $fileName): string
 {
 	$imageBase64Array = explode(';base64,', $imageBase64);
 	$imgExtension = str_replace('data:image/', '', $imageBase64Array[0]);
 	$imageDecoded = base64_decode($imageBase64Array[1]);
-	saveFile(__DIR__ . "/src/images/image.{$imgExtension}", $imageDecoded);
+	$imagePath = "/src/images/{$fileName}.{$imgExtension}";
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	saveFile(__DIR__ . $imagePath, $imageDecoded);
+	return $imagePath;
 }
 
 function createDBConnection(): mysqli {
@@ -42,15 +46,19 @@ function closeDBConnection(mysqli $conn): void {
 }
 
 function savePostToDatabase(mysqli $conn, $data): bool {
+	$imageName = strtolower(str_replace(" ", "-", $data['title']));
+	$imageUrl = saveImage($data['image_url'], $imageName);
+	$imageName = strtolower(str_replace(" ", "-", $data['author']));
+	$authorUrl = saveImage($data['author_url'], $imageName);
 	$sql = "INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, adventure)
 					VALUES ( 
 					        '{$data['title']}',
 					        '{$data['subtitle']}',
 					        '{$data['content']}',
 					        '{$data['author']}',
-					        '{$data['author_url']}',
+					        '$authorUrl',
 					        '{$data['publish_date']}',
-					        '{$data['image_url']}',
+					        '$imageUrl',
 					        '{$data['featured']}',
 					        '{$data['adventure']}'
 					        );";
@@ -65,7 +73,6 @@ if ($method === 'POST') {
 	$dataAsJson = file_get_contents("php://input");
 	$dataAsArray = json_decode($dataAsJson, true);
 	savePostToDatabase($connection, $dataAsArray);
-	echo 'save';
 	closeDBConnection($connection);
 } else {
 	echo 'Метод не POST';
