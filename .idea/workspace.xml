@@ -7,10 +7,6 @@
     <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Создана база данных и реализована выдача контента из неё">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lw/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/lw/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lw/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/lw/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lw/data/sql/posts/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lw/data/sql/posts/insert.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lw/data/sql/table/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lw/data/sql/table/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lw/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lw/post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/var/www/web",
+    "last_opened_file_path": "/home/yogurt/Documents/projects/php",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -124,6 +120,7 @@
       <workItem from="1711684509679" duration="15489000" />
       <workItem from="1711776016771" duration="5366000" />
       <workItem from="1712257323943" duration="3457000" />
+      <workItem from="1712294314397" duration="2066000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
