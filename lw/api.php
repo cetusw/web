@@ -45,28 +45,30 @@ function closeDBConnection(mysqli $conn): void {
 	$conn->close();
 }
 
-function savePostToDatabase(mysqli $conn, $data): bool {
+function savePostToDatabase(mysqli $conn, $data): bool
+{
 	$imageName = strtolower(str_replace(" ", "-", $data['title']));
 	$imageUrl = saveImage($data['image_url'], $imageName);
 	$imageName = strtolower(str_replace(" ", "-", $data['author']));
 	$authorUrl = saveImage($data['author_url'], $imageName);
+	$data['publish_date'] = strtotime($data['publish_date']);
 	$sql = "INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, adventure)
-					VALUES ( 
-					        '{$data['title']}',
-					        '{$data['subtitle']}',
-					        '{$data['content']}',
-					        '{$data['author']}',
-					        '$authorUrl',
-					        '{$data['publish_date']}',
-					        '$imageUrl',
-					        '{$data['featured']}',
-					        '{$data['adventure']}'
-					        );";
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
-	return $conn->query($sql);
-}
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+	$stmt = $conn->prepare($sql);
 
+	if ($stmt) {
+		$stmt->bind_param("ssssssssi", $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure']);
+		if ($stmt->execute()) {
+			return true;
+		} else {
+			echo 'Error';
+			return false;
+		}
+	} else {
+		echo 'Error';
+		return false;
+	}
+}
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'POST') {
 	$connection = createDBConnection();
