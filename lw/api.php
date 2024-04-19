@@ -11,13 +11,13 @@ function saveFile(string $file, string $data): void
 	if ($myFile) {
 		$result = fwrite($myFile, $data);
 		if ($result) {
-			echo 'Данные успешно сохранены в файл';
+			echo 'Данные успешно сохранены в файл ';
 		} else {
-			echo 'Произошла ошибка при сохранении данных в файл';
+			echo 'Произошла ошибка при сохранении данных в файл ';
 		}
 		fclose($myFile);
 	} else {
-		echo 'Произошла ошибка при открытии файла';
+		echo 'Произошла ошибка при открытии файла ';
 	}
 }
 
@@ -73,9 +73,24 @@ function savePostToDatabase(mysqli $conn, $data): bool
 function dataIsCorrect($data): bool
 {
 	foreach ($data as $key => $value) {
-		$value = (string) $value;
-		if (!preg_match(pattern: "~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=-_]+$~", subject: $value)) {
-			return false;
+		switch ($key) {
+			case "title":
+			case "subtitle":
+			case "content":
+			case "author":
+			case "publish_date":
+				if ((!preg_match(pattern: "~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=-_]+$~", subject: $value)) || (gettype($value) !== "string")) {
+					echo "Введён неправильный " . $key;
+				  return false;
+			  }
+				break;
+			case "featured":
+			case "adventure":
+				if ((!preg_match(pattern: "~^[0-1]+$~", subject: $value)) || (gettype($value) !== "integer")) {
+					echo "Введён неправильный " . $key;
+					return false;
+				}
+				break;
 		}
 	}
 	return true;
@@ -88,10 +103,8 @@ if ($method === 'POST') {
 	$dataAsArray = json_decode($dataAsJson, true);
 	if (dataIsCorrect($dataAsArray)) {
 		savePostToDatabase($connection, $dataAsArray);
-	} else {
-		echo "Данные введены некорректно";
 	}
 	closeDBConnection($connection);
 } else {
-	echo 'Метод не POST';
+	echo "Метод не POST";
 }
