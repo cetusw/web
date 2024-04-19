@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Добавлена проверка пустой строки в json">
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Добавлена проверка типов в json | Аннотированный вывод">
+      <change afterPath="$PROJECT_DIR$/ConnectionProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/admin-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/admin-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +125,7 @@
       <workItem from="1713467522719" duration="463000" />
       <workItem from="1713467992482" duration="14858000" />
       <workItem from="1713499052957" duration="6042000" />
+      <workItem from="1713506504969" duration="1910000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -267,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713501611770</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Добавлена проверка типов в json | Аннотированный вывод">
+      <option name="closed" value="true" />
+      <created>1713506935431</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713506935431</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +313,8 @@
     <MESSAGE value="Сохранение поста через json без валидации" />
     <MESSAGE value="Возможно добавил проверку на sql-инъекции | Начата вёрстка страницы /admin" />
     <MESSAGE value="Добавлена проверка пустой строки в json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена проверка пустой строки в json" />
+    <MESSAGE value="Добавлена проверка типов в json | Аннотированный вывод" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена проверка типов в json | Аннотированный вывод" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

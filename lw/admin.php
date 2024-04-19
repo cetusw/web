@@ -13,7 +13,7 @@
   <div class="header-block__content container">
     <a href="/admin"><img class="header-block__logo" src="static/images/escape-author.svg" alt="Logo"></a>
     <div class="header-block__account">
-      <a href=""><img class="header-block__author-image" src="static/images/author-image.svg" alt="Logout icon"></a>
+      <a href=""><div class="header-block__author-image">N</div></a>
       <a href=""><img class="header-block__logout-icon" src="static/images/log-out.svg" alt="Logout icon"></a>
     </div>
   </div>

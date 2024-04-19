@@ -31,6 +31,9 @@ input[type="file"] {
 }
 
 .header-block__author-image {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(221, 120, 63, 1);
     margin: 8px;
 }
 

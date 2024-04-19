@@ -1,9 +1,6 @@
 <?php
 
-const HOST = 'localhost';
-const USERNAME = 'yogurt';
-const PASSWORD = 'pAssw0rd#';
-const DATABASE = 'blog';
+require_once 'ConnectionProvider.php';
 
 function saveFile(string $file, string $data): void
 {
@@ -27,29 +24,15 @@ function saveImage(string $imageBase64, $fileName): string
 	$imgExtension = str_replace('data:image/', '', $imageBase64Array[0]);
 	$imageDecoded = base64_decode($imageBase64Array[1]);
 	$imagePath = "/src/images/{$fileName}.{$imgExtension}";
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
 	saveFile(__DIR__ . $imagePath, $imageDecoded);
 	return $imagePath;
 }
 
-function createDBConnection(): mysqli {
-	$conn = new mysqli(HOST, USERNAME, PASSWORD, DATABASE);
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
-	return $conn;
-}
-
-function closeDBConnection(mysqli $conn): void {
-	$conn->close();
-}
-
 function savePostToDatabase(mysqli $conn, $data): bool
 {
-	$imageName = strtolower(str_replace(" ", "-", $data['title']));
+	$imageName = strtolower(str_replace(' ', '-', $data['title']));
 	$imageUrl = saveImage($data['image_url'], $imageName);
-	$imageName = strtolower(str_replace(" ", "-", $data['author']));
+	$imageName = strtolower(str_replace(' ', '-', $data['author']));
 	$authorUrl = saveImage($data['author_url'], $imageName);
 	$data['publish_date'] = strtotime($data['publish_date']);
 	$sql = "INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, adventure)
@@ -57,37 +40,36 @@ function savePostToDatabase(mysqli $conn, $data): bool
 	$stmt = $conn->prepare($sql);
 
 	if ($stmt) {
-		$stmt->bind_param("sssssssii", $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure']);
+		$stmt->bind_param('sssssssii', $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure']);
 		if ($stmt->execute()) {
 			return true;
 		} else {
-			echo 'Error';
+			echo 'SQL injection!';
 			return false;
 		}
-	} else {
-		echo 'Error';
-		return false;
 	}
+	echo 'SQL injection!';
+	return false;
 }
 
 function dataIsCorrect($data): bool
 {
 	foreach ($data as $key => $value) {
 		switch ($key) {
-			case "title":
-			case "subtitle":
-			case "content":
-			case "author":
-			case "publish_date":
-				if ((!preg_match(pattern: "~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=-_]+$~", subject: $value)) || (gettype($value) !== "string")) {
-					echo "Введён неправильный " . $key;
+			case 'title':
+			case 'subtitle':
+			case 'content':
+			case 'author':
+			case 'publish_date':
+				if ((!preg_match(pattern: '~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=-_]+$~', subject: $value)) || (gettype($value) !== 'string')) {
+					echo 'Введён неправильный ' . $key;
 				  return false;
 			  }
 				break;
-			case "featured":
-			case "adventure":
-				if ((!preg_match(pattern: "~^[0-1]+$~", subject: $value)) || (gettype($value) !== "integer")) {
-					echo "Введён неправильный " . $key;
+			case 'featured':
+			case 'adventure':
+				if ((!preg_match(pattern: '~^[0-1]+$~', subject: $value)) || (gettype($value) !== 'integer')) {
+					echo 'Введён неправильный ' . $key;
 					return false;
 				}
 				break;
@@ -99,12 +81,12 @@ function dataIsCorrect($data): bool
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'POST') {
 	$connection = createDBConnection();
-	$dataAsJson = file_get_contents("php://input");
+	$dataAsJson = file_get_contents('php://input');
 	$dataAsArray = json_decode($dataAsJson, true);
 	if (dataIsCorrect($dataAsArray)) {
 		savePostToDatabase($connection, $dataAsArray);
 	}
 	closeDBConnection($connection);
 } else {
-	echo "Метод не POST";
+	echo 'Метод не POST';
 }
