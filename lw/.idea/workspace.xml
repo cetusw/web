@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сохранение поста через json без валидации">
-      <change afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/author-image.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/escape-author.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/log-out.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/placeholder-image-rectangle-10mb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/placeholder-image-rectangle-5mb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/placeholder-image-round.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/admin-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Возможно добавил проверку на sql-инъекции | Начата вёрстка страницы /admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api.php" afterDir="false" />
     </list>
@@ -129,7 +120,8 @@
       <workItem from="1713429120779" duration="1392000" />
       <workItem from="1713437053235" duration="3170000" />
       <workItem from="1713467522719" duration="463000" />
-      <workItem from="1713467992482" duration="14543000" />
+      <workItem from="1713467992482" duration="14858000" />
+      <workItem from="1713499052957" duration="2452000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -259,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712779999796</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Возможно добавил проверку на sql-инъекции | Начата вёрстка страницы /admin">
+      <option name="closed" value="true" />
+      <created>1713483224857</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713483224857</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +291,8 @@
     <MESSAGE value="Сохранение картинки через api" />
     <MESSAGE value="Сохранение поста через json в базу данных (без картинок)" />
     <MESSAGE value="Сохранение поста через json без валидации" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сохранение поста через json без валидации" />
+    <MESSAGE value="Возможно добавил проверку на sql-инъекции | Начата вёрстка страницы /admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Возможно добавил проверку на sql-инъекции | Начата вёрстка страницы /admin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

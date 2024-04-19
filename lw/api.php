@@ -57,7 +57,7 @@ function savePostToDatabase(mysqli $conn, $data): bool
 	$stmt = $conn->prepare($sql);
 
 	if ($stmt) {
-		$stmt->bind_param("ssssssssi", $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure']);
+		$stmt->bind_param("sssssssii", $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure']);
 		if ($stmt->execute()) {
 			return true;
 		} else {
@@ -69,12 +69,28 @@ function savePostToDatabase(mysqli $conn, $data): bool
 		return false;
 	}
 }
+
+function dataIsCorrect($data): bool
+{
+	foreach ($data as $key => $value) {
+		$value = (string) $value;
+		if (!preg_match(pattern: "~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=-_]+$~", subject: $value)) {
+			return false;
+		}
+	}
+	return true;
+}
+
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'POST') {
 	$connection = createDBConnection();
 	$dataAsJson = file_get_contents("php://input");
 	$dataAsArray = json_decode($dataAsJson, true);
-	savePostToDatabase($connection, $dataAsArray);
+	if (dataIsCorrect($dataAsArray)) {
+		savePostToDatabase($connection, $dataAsArray);
+	} else {
+		echo "Данные введены некорректно";
+	}
 	closeDBConnection($connection);
 } else {
 	echo 'Метод не POST';
