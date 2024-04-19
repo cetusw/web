@@ -61,7 +61,7 @@ function dataIsCorrect($data): bool
 			case 'content':
 			case 'author':
 			case 'publish_date':
-				if ((!preg_match(pattern: '~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=-_]+$~', subject: $value)) || (gettype($value) !== 'string')) {
+				if ((!preg_match(pattern: '~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=_-]+$~', subject: $value)) || (gettype($value) !== 'string')) {
 					echo 'Введён неправильный ' . $key;
 				  return false;
 			  }
