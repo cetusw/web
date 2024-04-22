@@ -30,15 +30,25 @@ input[type="file"] {
     align-items: center;
 }
 
+.header-block__account a {
+    height: 40px;
+}
+
 .header-block__author-image {
+    display: inline-block;
     width: 32px;
     height: 32px;
     background-color: rgba(221, 120, 63, 1);
-    margin: 8px;
+    border-radius: 16px;
+    text-align: center;
+    font: 400 16px/32px "Oxygen", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin: 4px;
 }
 
 .header-block__logout-icon {
     margin: 8px;
+
 }
 
 main {
@@ -95,17 +105,25 @@ main {
 .main-information__form input {
     width: 560px;
     height: 40px;
-    background-color: rgba(247, 247, 247, 1);
+    background-color: rgba(255, 255, 255, 1);
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid #2E2E2E;
+    border-bottom: 1px solid rgba(247, 247, 247, 1);
     border-radius: 5px 5px 0 0;
     margin: 5px 0 40px 0;
 }
 
-.main-information__form input::placeholder {
+.main-information__form input {
     padding-left: 4px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.main-information__form input::placeholder {
     color: rgba(46, 46, 46, 1);
 }
 

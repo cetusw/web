@@ -13,7 +13,7 @@
   <div class="header-block__content container">
     <a href="/admin"><img class="header-block__logo" src="static/images/escape-author.svg" alt="Logo"></a>
     <div class="header-block__account">
-      <a href=""><div class="header-block__author-image">N</div></a>
+      <div class="header-block__author-image">N</div>
       <a href=""><img class="header-block__logout-icon" src="static/images/log-out.svg" alt="Logout icon"></a>
     </div>
   </div>
@@ -25,33 +25,33 @@
       <h1>New Post</h1>
       <h2>Fill out the form bellow and publish your article</h2>
     </div>
-    <button class="publish">Publish</button>
+    <button id="button" class="publish">Publish</button>
   </div>
   <div class="main-information container">
     <form class="main-information__form">
       <h2>Main Information</h2>
-      <label>Title<br><input name="title" type="text" placeholder="New Post" /></label>
-      <label>Short description<br><input name="description" type="text" placeholder="Please, enter any description" /></label>
-      <label>Author name<br><input name="author-name" type="text" /></label>
+      <label>Title<br><input id="input" name="title" type="text" placeholder="New Post" /></label>
+      <label>Short description<br><input id="input" name="description" type="text" placeholder="Please, enter any description" /></label>
+      <label>Author name<br><input id="input" name="author-name" type="text" /></label>
       <label>
         Author Photo<br>
-        <img class="main-information__author-image" src="static/images/placeholder-image-round.svg" alt="Photo">
-        <div class="main-information__upload-author-image">
-          <input name="author-image" type="file"/>
-          <span class="main-information__placeholder-upload">Upload</span>
+        <img class="input" src="static/images/placeholder-image-round.svg" alt="Photo">
+        <div class="input">
+          <input id="input" name="author-image" type="file"/>
+          <span class="input">Upload</span>
         </div>
       </label>
-      <label>Publish Date<br><input name="publish-date" type="date" /></label>
+      <label>Publish Date<br><input id="input" name="publish-date" type="date" /></label>
       <label>
         <span>Hero Image</span><br>
         <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" alt="Photo">
-        <input name="author-image" type="file"/><br>
+        <input id="input" name="hero-image" type="file"/><br>
         <span>Size up to 10mb. Format: png, jpeg, gif.</span>
       </label>
       <label>
         <span>Hero Image</span><br>
         <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" alt="Photo">
-        <input name="author-image" type="file"/><br>
+        <input id="input" name="hero-image-small" type="file"/><br>
         <span>Size up to 5mb. Format: png, jpeg, gif.</span>
       </label>
     </form>
@@ -66,6 +66,6 @@
 
 <footer class="footer-block">
 </footer>
-
+<script src="admin.js" type="application/javascript"></script>
 </body>
 </html>
