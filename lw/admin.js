@@ -15,5 +15,6 @@ function inputBlur(event) {
 for (const input of inputs) {
     input.addEventListener('focus', inputFocus);
     input.addEventListener('input', inputFocus);
+
 }
 
