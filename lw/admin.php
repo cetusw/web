@@ -47,23 +47,34 @@
           <span>Hero Image</span><br>
           <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" alt="Photo">
           <input id="input" name="hero-image" type="file"/><br>
-          <span>Size up to 10mb. Format: png, jpeg, gif.</span>
+          <span class="main-information__ps">Size up to 10mb. Format: png, jpeg, gif.</span>
         </label>
         <label>
           <span>Hero Image</span><br>
           <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" alt="Photo">
           <input id="input" name="hero-image-small" type="file"/><br>
-          <span>Size up to 5mb. Format: png, jpeg, gif.</span>
+          <span class="main-information__ps">Size up to 5mb. Format: png, jpeg, gif.</span>
         </label>
       </form>
       <div class="main-information__preview">
-        <h4>Article preview</h4>
-        <div class="main-information__article-preview">
-
+        <h3>Article preview</h3>
+        <div class="main-information__article-outer">
+          <div class="main-information__article-inner">
+            <div class="main-information__article-header">
+              <div class="main-information__bullet"></div>
+              <div class="main-information__bullet"></div>
+              <div class="main-information__bullet"></div>
+            </div>
+            <h5>New Post</h5>
+            <h6>Please, enter any description</h6>
+            <img src="static/images/article-preview.svg">
+          </div>
         </div>
-        <h5>Post card preview</h5>
+        <h4>Post card preview</h4>
         <div class="main-information__post-card-preview">
+          <div class="main-information__post-card-outer">
 
+          </div>
         </div>
       </div>
     </div>
