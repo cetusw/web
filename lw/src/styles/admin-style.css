@@ -84,14 +84,16 @@ main {
 }
 
 .main-information {
-    display: flex;
-    justify-content: space-between;
     background-color: rgba(255, 255, 255, 1);
-    padding-left: 40px;
-    padding-top: 40px;
+    padding: 40px 40px 56px 40px;
 }
 
-.main-information__form h2{
+.main-information__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-information h2{
     font: 400 27px/30px "Lora", sans-serif;
     margin-bottom: 40px;
 }
@@ -112,10 +114,7 @@ main {
     border-bottom: 1px solid rgba(247, 247, 247, 1);
     border-radius: 5px 5px 0 0;
     margin: 5px 0 40px 0;
-}
-
-.main-information__form input {
-    padding-left: 4px;
+    padding: 0 8px 0 4px;
 }
 
 input:focus {
@@ -127,9 +126,21 @@ input:focus {
     color: rgba(46, 46, 46, 1);
 }
 
+.main-information__preview h4{
+    font: 400 14px/20px "Oxygen", sans-serif;
+    color: rgba(46, 46, 46, 0.63);
+}
+
+.main-information__preview h5{
+    font: 400 14px/20px "Oxygen", sans-serif;
+    color: rgba(46, 46, 46, 0.63);
+}
+
 .main-information__article-preview {
     width: 440px;
     height: 385px;
+    border: 1px solid rgba(247, 247, 247, 1);
+    border-radius: 30px 30px 0 0;
 }
 
 .main-information__post-card-preview {

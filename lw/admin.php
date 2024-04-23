@@ -28,44 +28,50 @@
     <button id="button" class="publish">Publish</button>
   </div>
   <div class="main-information container">
-    <form class="main-information__form">
-      <h2>Main Information</h2>
-      <label>Title<br><input id="input" name="title" type="text" placeholder="New Post" /></label>
-      <label>Short description<br><input id="input" name="description" type="text" placeholder="Please, enter any description" /></label>
-      <label>Author name<br><input id="input" name="author-name" type="text" /></label>
-      <label>
-        Author Photo<br>
-        <img class="input" src="static/images/placeholder-image-round.svg" alt="Photo">
-        <div class="input">
-          <input id="input" name="author-image" type="file"/>
-          <span class="input">Upload</span>
+    <h2>Main Information</h2>
+    <div class="main-information__content">
+      <form class="main-information__form">
+        <label>Title<br><input id="input" name="title" type="text" placeholder="New Post" /></label>
+        <label>Short description<br><input id="input" name="description" type="text" placeholder="Please, enter any description" /></label>
+        <label>Author name<br><input id="input" name="author-name" type="text" /></label>
+        <label>
+          Author Photo<br>
+          <img class="input" src="static/images/placeholder-image-round.svg" alt="Photo">
+          <div class="input">
+            <input id="input" name="author-image" type="file"/>
+            <span class="input">Upload</span>
         </div>
-      </label>
-      <label>Publish Date<br><input id="input" name="publish-date" type="date" /></label>
-      <label>
-        <span>Hero Image</span><br>
-        <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" alt="Photo">
-        <input id="input" name="hero-image" type="file"/><br>
-        <span>Size up to 10mb. Format: png, jpeg, gif.</span>
-      </label>
-      <label>
-        <span>Hero Image</span><br>
-        <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" alt="Photo">
-        <input id="input" name="hero-image-small" type="file"/><br>
-        <span>Size up to 5mb. Format: png, jpeg, gif.</span>
-      </label>
-    </form>
-    <div class="main-information__preview">
-      <h4>Article preview</h4>
-      <div class="main-information__article-preview"></div>
-      <h5>Post card preview</h5>
-      <div class="main-information__post-card-preview"></div>
+        </label>
+        <label>Publish Date<br><input id="input" name="publish-date" type="date" /></label>
+        <label>
+          <span>Hero Image</span><br>
+          <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" alt="Photo">
+          <input id="input" name="hero-image" type="file"/><br>
+          <span>Size up to 10mb. Format: png, jpeg, gif.</span>
+        </label>
+        <label>
+          <span>Hero Image</span><br>
+          <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" alt="Photo">
+          <input id="input" name="hero-image-small" type="file"/><br>
+          <span>Size up to 5mb. Format: png, jpeg, gif.</span>
+        </label>
+      </form>
+      <div class="main-information__preview">
+        <h4>Article preview</h4>
+        <div class="main-information__article-preview">
+
+        </div>
+        <h5>Post card preview</h5>
+        <div class="main-information__post-card-preview">
+
+        </div>
+      </div>
     </div>
   </div>
 </main>
 
 <footer class="footer-block">
 </footer>
-<script src="admin.js" type="application/javascript"></script>
+<script src="src/js/admin.js" type="application/javascript"></script>
 </body>
 </html>
