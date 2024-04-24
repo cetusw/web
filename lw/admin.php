@@ -72,12 +72,25 @@
         </div>
         <h4>Post card preview</h4>
         <div class="main-information__post-card-preview">
-          <div class="main-information__post-card-outer">
-
+          <div class="main-information__post">
+            <img class="main-information__author-image-preview" src="static/images/post-card-preview.svg">
+            <div class="main-information__post-header">
+              <h5>New Post</h5>
+              <h6>Please, enter any description</h6>
+            </div>
+            <div class="main-information__post-footer">
+              <img src="static/images/author-image-preview.svg">
+              <span class="main-information__author-name">Enter author name</span>
+              <span class="main-information__publish-date">4/19/2023</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="content container">
+    <h1>Content</h1>
+    <label>Post content (plain text)<br><textarea class="content__textarea" name="post-content" placeholder="Type anything you want ..."></textarea></label>
   </div>
 </main>
 

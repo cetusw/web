@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Переместил js в отдельную папку | Переформировал структуру страницы | Начал делать правую часть страницы">
-      <change afterPath="$PROJECT_DIR$/src/images/article-preview.svg" afterDir="false" />
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сделал article-preview, кроме градиента">
+      <change afterPath="$PROJECT_DIR$/src/images/author-image-preview.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/post-card-preview.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/admin-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/admin-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +132,7 @@
       <workItem from="1713506504969" duration="3635000" />
       <workItem from="1713778989660" duration="12778000" />
       <workItem from="1713866526449" duration="4314000" />
-      <workItem from="1713895957191" duration="5012000" />
+      <workItem from="1713895957191" duration="15350000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -310,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713869590922</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Сделал article-preview, кроме градиента">
+      <option name="closed" value="true" />
+      <created>1713901326114</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713901326114</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +356,8 @@
     <MESSAGE value="Добавлен файл ConnectionProvider.php, в котором реализовано подключение к базе данных | Исправлена ошибка форматирования с кавычками" />
     <MESSAGE value="Исправлена ошибка валидации даты" />
     <MESSAGE value="Переместил js в отдельную папку | Переформировал структуру страницы | Начал делать правую часть страницы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переместил js в отдельную папку | Переформировал структуру страницы | Начал делать правую часть страницы" />
+    <MESSAGE value="Сделал article-preview, кроме градиента" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал article-preview, кроме градиента" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

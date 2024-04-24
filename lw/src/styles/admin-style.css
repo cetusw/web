@@ -86,6 +86,7 @@ main {
 .main-information {
     background-color: rgba(255, 255, 255, 1);
     padding: 40px 40px 56px 40px;
+    margin: auto auto 16px auto;
 }
 
 .main-information__content {
@@ -192,4 +193,91 @@ input:focus {
 .main-information__post-card-preview {
     width: 440px;
     height: 360px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 10px 0 0 0;
+}
+
+.main-information__post {
+    margin: 32px auto auto 16px;
+    width: 296px;
+    height: 291px;
+    border: 1px solid rgba(234, 234, 234, 1);
+}
+
+.main-information__author-image-preview {
+    display: block;
+}
+
+.main-information__post-header {
+    height: 91px;
+    border-top: 1px solid rgba(234, 234, 234, 1);
+}
+
+.main-information__post-header h5 {
+    font: 400 16px/21px "Lora", sans-serif;
+    color: rgba(16, 19, 21, 1);
+    margin: 14px 0 0 13px;
+}
+
+.main-information__post-header h6 {
+    font: 400 13px/19px "Lora", sans-serif;
+    color: rgba(122, 122, 122, 1);
+    margin: 0 0 0 13px;
+}
+
+.main-information__post-footer {
+    background-color: rgba(252, 252, 252, 1);
+    border-top: 1px solid rgba(234, 234, 234, 1);
+    height: 48px;
+}
+
+.main-information__post-footer img {
+    display: inline;
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin: 12px 0 0 13px;
+}
+
+.main-information__author-name {
+    display: inline;
+    font: 400 12px/35px "Oxygen", sans-serif;
+    color: rgba(153, 153, 153, 1);
+    float: left;
+    margin: 8px 0 5px 10px;
+}
+
+.main-information__publish-date {
+    display: inline;
+    font: 400 12px/35px "Oxygen", sans-serif;
+    color: rgba(153, 153, 153, 1);
+    float: right;
+    margin: 8px 13px 5px 0;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 40px 40px 56px 40px;
+}
+
+.content h1 {
+    font: 400 27px/30px "Lora", sans-serif;
+    color: rgba(0, 0, 0, 1);
+    margin: 0 0 40px 0;
+}
+
+.content label {
+    font: 400 12px/16px "Oxygen", sans-serif;
+    color: rgba(122, 122, 122, 1);
+}
+
+.content__textarea {
+    width: 940px;
+    height: 160px;
+    padding: 8px 0 8px 8px;
+}
+
+textarea::placeholder {
+    color: rgba(153, 153, 153, 1);
+    font: 400 16px/24px "Oxygen", sans-serif;
 }
