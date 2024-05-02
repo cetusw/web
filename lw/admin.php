@@ -33,28 +33,28 @@
     <h2>Main Information</h2>
     <div class="main-information__content">
       <form class="main-information__form">
-        <label>Title<br><input id="input" name="title" type="text" placeholder="New Post" maxlength="30"></label>
-        <label>Short description<br><input id="input" name="description" type="text" placeholder="Please, enter any description" maxlength="30"></label>
-        <label>Author name<br><input id="input" name="author-name" type="text" maxlength="30"></label>
+        <label>Title<br><input id="title-input" name="title" type="text" placeholder="New Post" maxlength="30"></label>
+        <label>Short description<br><input id="description-input" name="description" type="text" placeholder="Please, enter any description" maxlength="30"></label>
+        <label>Author name<br><input id="author-input" name="author-name" type="text" maxlength="30"></label>
         <label>
           Author Photo<br>
-          <div class="main-information__author-image-upload">
+          <div class="main-information__author-image-upload" id="author-image">
             <img class="main-information__author-image" src="static/images/placeholder-image-round.svg" alt="Photo">
-            <input id="input" name="author-image" type="file">
+            <input id="author-image-input" name="author-image" type="file">
             <span>Upload</span>
           </div>
         </label>
-        <label>Publish Date<br><input id="input" name="publish-date" type="date" /></label>
+        <label>Publish Date<br><input id="date-input" name="publish-date" type="date" /></label>
         <label class="main-information__hero-image">
           <span>Hero Image</span><br>
           <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" alt="Photo">
-          <input id="input" name="hero-image" type="file"/><br>
+          <input id="image10mb-input" name="hero-image" type="file"/><br>
           <span class="main-information__ps">Size up to 10mb. Format: png, jpeg, gif.</span>
         </label>
         <label>
           <span>Hero Image</span><br>
           <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" alt="Photo">
-          <input id="input" name="hero-image-small" type="file"/><br>
+          <input id="image5mb-input" name="hero-image-small" type="file"/><br>
           <span class="main-information__ps">Size up to 5mb. Format: png, jpeg, gif.</span>
         </label>
       </form>
@@ -67,8 +67,8 @@
               <div class="main-information__bullet"></div>
               <div class="main-information__bullet"></div>
             </div>
-            <p class="main-information__article-title">New Post</p>
-            <p class="main-information__article-subtitle">Please, enter any description</p>
+            <p class="main-information__article-title" id="article-preview-title"></p>
+            <p class="main-information__article-description" id="article-preview-description"></p>
             <img src="static/images/article-preview.svg" alt="Article preview">
           </div>
         </div>
@@ -77,13 +77,13 @@
           <div class="main-information__post">
             <img class="main-information__author-image-preview" src="static/images/post-card-preview.svg" alt="Author Image">
             <div class="main-information__post-header">
-              <p class="main-information__post-title">New Post</p>
-              <p class="main-information__post-subtitle">Please, enter any description</p>
+              <p class="main-information__post-title" id="post-preview-title"></p>
+              <p class="main-information__post-description" id="post-preview-description"></p>
             </div>
             <div class="main-information__post-footer">
               <img src="static/images/author-image-preview.svg" alt="Author Image">
-              <span class="main-information__author-name">Enter author name</span>
-              <span class="main-information__publish-date">4/19/2023</span>
+              <span class="main-information__author-name" id="post-preview-author"></span>
+              <span class="main-information__publish-date" id="post-preview-date"></span>
             </div>
           </div>
         </div>

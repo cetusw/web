@@ -187,6 +187,7 @@ input:focus {
     border: 1px solid rgba(217, 217, 217, 1);
     border-radius: 30px 30px 0 0;
     mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 82%, rgba(255, 255, 255, 0));
+    margin: 0 0 20px 0;
 }
 
 .main-information__article-inner {
@@ -220,7 +221,7 @@ input:focus {
     text-align: center;
 }
 
-.main-information__article-subtitle{
+.main-information__article-description {
     margin: 0 0 36px 0;
     font: 400 10px/12px "Oxygen", sans-serif;
     color: rgba(46, 46, 46, 0.63);
@@ -257,7 +258,7 @@ input:focus {
     margin: 14px 0 0 13px;
 }
 
-.main-information__post-subtitle{
+.main-information__post-description {
     font: 400 13px/19px "Lora", sans-serif;
     color: rgba(122, 122, 122, 1);
     margin: 0 0 0 13px;
