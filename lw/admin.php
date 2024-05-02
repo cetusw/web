@@ -60,34 +60,30 @@
       </form>
       <div class="main-information__preview">
         <p class="main-information__preview-title">Article preview</p>
-        <div class="main-information__bottom-gradient-article">
-          <div class="main-information__article-outer">
-            <div class="main-information__article-inner">
-              <div class="main-information__article-header">
-                <div class="main-information__bullet"></div>
-                <div class="main-information__bullet"></div>
-                <div class="main-information__bullet"></div>
-              </div>
-              <p class="main-information__article-title">New Post</p>
-              <p class="main-information__article-subtitle">Please, enter any description</p>
-              <img src="static/images/article-preview.svg" alt="Article preview">
+        <div class="main-information__article-outer">
+          <div class="main-information__article-inner">
+            <div class="main-information__article-header">
+              <div class="main-information__bullet"></div>
+              <div class="main-information__bullet"></div>
+              <div class="main-information__bullet"></div>
             </div>
+            <p class="main-information__article-title">New Post</p>
+            <p class="main-information__article-subtitle">Please, enter any description</p>
+            <img src="static/images/article-preview.svg" alt="Article preview">
           </div>
         </div>
         <p class="main-information__preview-title">Post card preview</p>
-        <div class="main-information__bottom-gradient-post">
-          <div class="main-information__post-card-preview">
-            <div class="main-information__post">
-              <img class="main-information__author-image-preview" src="static/images/post-card-preview.svg" alt="Author Image">
-              <div class="main-information__post-header">
-                <p class="main-information__post-title">New Post</p>
-                <p class="main-information__post-subtitle">Please, enter any description</p>
-              </div>
-              <div class="main-information__post-footer">
-                <img src="static/images/author-image-preview.svg" alt="Author Image">
-                <span class="main-information__author-name">Enter author name</span>
-                <span class="main-information__publish-date">4/19/2023</span>
-              </div>
+        <div class="main-information__post-card-preview">
+          <div class="main-information__post">
+            <img class="main-information__author-image-preview" src="static/images/post-card-preview.svg" alt="Author Image">
+            <div class="main-information__post-header">
+              <p class="main-information__post-title">New Post</p>
+              <p class="main-information__post-subtitle">Please, enter any description</p>
+            </div>
+            <div class="main-information__post-footer">
+              <img src="static/images/author-image-preview.svg" alt="Author Image">
+              <span class="main-information__author-name">Enter author name</span>
+              <span class="main-information__publish-date">4/19/2023</span>
             </div>
           </div>
         </div>
