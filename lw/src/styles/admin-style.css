@@ -4,6 +4,14 @@
     text-decoration: none;
 }
 
+button {
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -116,18 +124,45 @@ main {
     margin-bottom: 40px;
 }
 
+.main-information__author-image-input {
+    height: 48px;
+    width: 48px;
+}
+
 .main-information__author-image-upload {
     display: flex;
 }
 
 .main-information__author-image {
     margin: 10px 16px 40px 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
 }
 
-.main-information__author-image-upload span {
+.main-information__author-image-upload-text {
     margin: 22px 0 12px 0;
     font: 400 16px/24px "Oxygen", sans-serif;
     color: rgba(46, 46, 46, 1);
+}
+
+.main-information__upload-new-avatar {
+    width: 122px;
+    height: 24px;
+    font: 400 16px/24px "Oxygen", sans-serif;
+    margin: 22px 16px 12px 0;
+}
+
+.main-information__remove-avatar {
+    width: 122px;
+    height: 24px;
+    font: 400 16px/24px "Oxygen", sans-serif;
+    margin: 22px 16px 12px 0;
+}
+
+.main-information__remove-avatar span {
+    height: 24px;
+    color: rgba(232, 105, 97, 1);
 }
 
 .main-information__hero-image-10mb,
@@ -228,6 +263,11 @@ input:focus {
     text-align: center;
 }
 
+.main-information__article-image-preview {
+    width: 408px;
+    height: 160px;
+}
+
 .main-information__post-card-preview {
     width: 440px;
     height: 360px;
@@ -243,8 +283,10 @@ input:focus {
     border: 1px solid rgba(234, 234, 234, 1);
 }
 
-.main-information__author-image-preview {
+.main-information__card-image-preview {
     display: block;
+    width: 296px;
+    height: 150px;
 }
 
 .main-information__post-header {
@@ -272,10 +314,11 @@ input:focus {
 
 .main-information__post-footer img {
     display: inline;
-    width: 26px;
-    height: 26px;
     float: left;
     margin: 12px 0 0 13px;
+    height: 26px;
+    width: 26px;
+    border-radius: 13px;
 }
 
 .main-information__author-name {
