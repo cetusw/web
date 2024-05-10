@@ -56,13 +56,21 @@
             <label>Publish Date<br><input id="date-input" name="publish-date" type="date" required></label>
             <label class="main-information__hero-image">
               <span>Hero Image</span><br>
-              <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" alt="Photo">
+              <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" id="hero-image-10mb" alt="Photo">
               <input id="image10mb-input" name="hero-image" type="file" required><br>
-              <span class="main-information__ps">Size up to 10mb. Format: png, jpeg, gif.</span>
+              <button class="main-information__upload-new-article" id="upload-new-article" hidden>
+                <img src="static/images/camera.svg" alt="camera">
+                <span>Upload New</span>
+              </button>
+              <button class="main-information__remove-article" id="remove-article" hidden>
+                <img src="static/images/trash-red.svg" alt="camera">
+                <span>Remove</span>
+              </button>
+              <span class="main-information__format" id="size">Size up to 10mb. Format: png, jpeg, gif.</span>
             </label>
             <label>
               <span>Hero Image</span><br>
-              <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" id="image5mb" alt="Photo">
+              <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" id="hero-image-5mb" alt="Photo">
               <input id="image5mb-input" name="hero-image-small" type="file" required><br>
               <span class="main-information__ps">Size up to 5mb. Format: png, jpeg, gif.</span>
             </label>

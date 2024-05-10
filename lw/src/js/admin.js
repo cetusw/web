@@ -53,15 +53,20 @@ const postPreviewDate = document.getElementById('post-preview-date');
 const authorImageInput = document.getElementById('author-image-input');
 const authorImage = document.getElementById('author-image');
 const articleImageInput = document.getElementById('image10mb-input');
+const heroImage10mb = document.getElementById('hero-image-10mb');
 const articleImagePreview = document.getElementById('article-image-preview');
 const cardImageInput = document.getElementById('image5mb-input');
+const heroImage5mb = document.getElementById('hero-image-5mb');
 const cardImagePreview = document.getElementById('card-image-preview');
 const authorImagePreview = document.getElementById('author-image-preview');
 
 //buttons
-const uploadNewButton = document.getElementById('upload-new-avatar');
-const removeButton = document.getElementById('remove-avatar');
+const uploadNewAvatar = document.getElementById('upload-new-avatar');
+const removeAvatar = document.getElementById('remove-avatar');
 const upload = document.getElementById('upload');
+const uploadNewArticle = document.getElementById('upload-new-article');
+const removeArticle = document.getElementById('remove-article');
+const size = document.getElementById('size');
 
 function initListeners() {
     inputTitle.addEventListener('input', changeTitle);
@@ -69,9 +74,10 @@ function initListeners() {
     inputAuthor.addEventListener('input', changeAuthor);
     inputDate.addEventListener('input', changeDate);
     authorImageInput.addEventListener('change', updateAuthorImageDisplay);
-    removeButton.addEventListener('click', removeAuthorImage);
-    uploadNewButton.addEventListener('click', uploadNewImage);
-    articleImageInput.addEventListener('click', updateArticleImageDispaly);
+    removeAvatar.addEventListener('click', removeAuthorImage);
+    uploadNewAvatar.addEventListener('click', uploadNewImageAvatar);
+    articleImageInput.addEventListener('change', updateArticleImageDisplay);
+    uploadNewArticle.addEventListener('click', uploadNewImageArticle);
 }
 
 function changeTitle(event) {
@@ -118,28 +124,40 @@ function updateAuthorImageDisplay(event) {
     const curFiles = event.target.files;
     if (curFiles.length !== 0) {
         authorImage.src = window.URL.createObjectURL(curFiles[0]);
-        uploadNewButton.hidden = false;
-        removeButton.hidden = false;
+        uploadNewAvatar.hidden = false;
+        removeAvatar.hidden = false;
         upload.hidden = true;
         authorImagePreview.src = authorImage.src;
     }
 }
 
 function removeAuthorImage(event) {
-    uploadNewButton.hidden = true;
-    removeButton.hidden = true;
+    uploadNewAvatar.hidden = true;
+    removeAvatar.hidden = true;
     upload.hidden = false;
     authorImage.src = 'static/images/placeholder-image-round.svg';
     authorImageInput.value = '';
     authorImagePreview.src = 'static/images/author-image-preview.svg';
 }
 
-function uploadNewImage(event) {
+function uploadNewImageAvatar(event) {
     authorImageInput.click();
 }
 
-function updateArticleImageDispaly(event) {
+function updateArticleImageDisplay(event) {
+    const articleFiles = event.target.files;
+    if (articleFiles.length !== 0) {
+        heroImage10mb.src = window.URL.createObjectURL(articleFiles[0]);
+        articleImagePreview.src = heroImage10mb.src;
+        heroImage10mb.classList.add('main-information__hero-image-10mb-uploaded');
+        uploadNewArticle.hidden = false;
+        removeArticle.hidden = false;
+        size.hidden = true;
+    }
+}
 
+function uploadNewImageArticle() {
+    articleImageInput.click();
 }
 
 initListeners();

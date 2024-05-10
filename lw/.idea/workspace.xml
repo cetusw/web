@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Переделал градиент">
-      <change afterPath="$PROJECT_DIR$/src/images/camera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/trash-red.svg" afterDir="false" />
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Перенёс все в форму | Добавил отображение картинка автора в превью | Поправил отображение элементов при загрузке картинки | Удаление картикни автора">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/admin.js" afterDir="false" />
@@ -138,7 +136,7 @@
       <workItem from="1714577597773" duration="7334000" />
       <workItem from="1714668101967" duration="7985000" />
       <workItem from="1714713360853" duration="5746000" />
-      <workItem from="1715182538545" duration="23787000" />
+      <workItem from="1715182538545" duration="29938000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -332,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714648261693</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Перенёс все в форму | Добавил отображение картинка автора в превью | Поправил отображение элементов при загрузке картинки | Удаление картикни автора">
+      <option name="closed" value="true" />
+      <created>1715268996781</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1715268996781</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +378,8 @@
     <MESSAGE value="Переместил js в отдельную папку | Переформировал структуру страницы | Начал делать правую часть страницы" />
     <MESSAGE value="Сделал article-preview, кроме градиента" />
     <MESSAGE value="Переделал градиент" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделал градиент" />
+    <MESSAGE value="Перенёс все в форму | Добавил отображение картинка автора в превью | Поправил отображение элементов при загрузке картинки | Удаление картикни автора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Перенёс все в форму | Добавил отображение картинка автора в превью | Поправил отображение элементов при загрузке картинки | Удаление картикни автора" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

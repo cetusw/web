@@ -165,7 +165,17 @@ main {
     color: rgba(232, 105, 97, 1);
 }
 
-.main-information__hero-image-10mb,
+.main-information__hero-image-10mb {
+    margin: 5px 0 12px 0;
+    width: 560px;
+    height: 160px;
+    border-radius: 5px;
+}
+
+.main-information__hero-image-10mb-uploaded {
+    border: 1px solid rgba(234, 234, 234, 1);
+}
+
 .main-information__hero-image-5mb {
     margin: 5px 0 12px 0;
 }
@@ -180,7 +190,25 @@ main {
     color: rgba(46, 46, 46, 0.63);
 }
 
-.main-information__ps {
+.main-information__upload-new-article {
+    width: 122px;
+    height: 24px;
+    font: 400 16px/24px "Oxygen", sans-serif;
+}
+
+.main-information__remove-article {
+    width: 91px;
+    height: 24px;
+    font: 400 16px/24px "Oxygen", sans-serif;
+    margin: 0 0 0 12px;
+}
+
+.main-information__remove-article span {
+    height: 24px;
+    color: rgba(232, 105, 97, 1);
+}
+
+.main-information__format {
     color: rgba(153, 153, 153, 1);
 }
 
