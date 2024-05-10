@@ -74,10 +74,11 @@ function initListeners() {
     inputAuthor.addEventListener('input', changeAuthor);
     inputDate.addEventListener('input', changeDate);
     authorImageInput.addEventListener('change', updateAuthorImageDisplay);
-    removeAvatar.addEventListener('click', removeAuthorImage);
+    removeAvatar.addEventListener('click', removeImageAvatar);
     uploadNewAvatar.addEventListener('click', uploadNewImageAvatar);
     articleImageInput.addEventListener('change', updateArticleImageDisplay);
     uploadNewArticle.addEventListener('click', uploadNewImageArticle);
+    removeArticle.addEventListener('click', removeImageArticle);
 }
 
 function changeTitle(event) {
@@ -131,7 +132,7 @@ function updateAuthorImageDisplay(event) {
     }
 }
 
-function removeAuthorImage(event) {
+function removeImageAvatar(event) {
     uploadNewAvatar.hidden = true;
     removeAvatar.hidden = true;
     upload.hidden = false;
@@ -158,6 +159,15 @@ function updateArticleImageDisplay(event) {
 
 function uploadNewImageArticle() {
     articleImageInput.click();
+}
+
+function removeImageArticle() {
+    uploadNewArticle.hidden = true;
+    removeArticle.hidden = true;
+    size.hidden = false;
+    heroImage10mb.src = 'static/images/placeholder-image-rectangle-10mb.svg';
+    articleImageInput.value = '';
+    articleImagePreview.src = 'static/images/article-preview.svg';
 }
 
 initListeners();

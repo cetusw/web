@@ -42,11 +42,11 @@
               <input id="author-image-input" name="author-image" type="file" required>
               <div class="main-information__author-image-upload">
                 <img class="main-information__author-image" src="static/images/placeholder-image-round.svg" id="author-image" alt="Photo">
-                <button class="main-information__upload-new-avatar" id="upload-new-avatar" hidden>
+                <button type="button" class="main-information__upload-new-avatar" id="upload-new-avatar" hidden>
                   <img src="static/images/camera.svg" alt="camera">
                   <span>Upload New</span>
                 </button>
-                <button class="main-information__remove-avatar" id="remove-avatar" hidden>
+                <button type="button" class="main-information__remove-avatar" id="remove-avatar" hidden>
                   <img src="static/images/trash-red.svg" alt="camera">
                   <span>Remove</span>
                 </button>
@@ -58,11 +58,11 @@
               <span>Hero Image</span><br>
               <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" id="hero-image-10mb" alt="Photo">
               <input id="image10mb-input" name="hero-image" type="file" required><br>
-              <button class="main-information__upload-new-article" id="upload-new-article" hidden>
+              <button type="button" class="main-information__upload-new-article" id="upload-new-article" hidden>
                 <img src="static/images/camera.svg" alt="camera">
                 <span>Upload New</span>
               </button>
-              <button class="main-information__remove-article" id="remove-article" hidden>
+              <button type="button" class="main-information__remove-article" id="remove-article" hidden>
                 <img src="static/images/trash-red.svg" alt="camera">
                 <span>Remove</span>
               </button>
