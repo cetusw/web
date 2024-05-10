@@ -178,6 +178,9 @@ main {
 
 .main-information__hero-image-5mb {
     margin: 5px 0 12px 0;
+    width: 296px;
+    height: 150px;
+    border-radius: 5px;
 }
 
 .main-information__hero-image {

@@ -66,7 +66,10 @@ const removeAvatar = document.getElementById('remove-avatar');
 const upload = document.getElementById('upload');
 const uploadNewArticle = document.getElementById('upload-new-article');
 const removeArticle = document.getElementById('remove-article');
-const size = document.getElementById('size');
+const size10mb = document.getElementById('size10mb');
+const uploadNewCard = document.getElementById('upload-new-card');
+const removeCard = document.getElementById('remove-card');
+const size5mb = document.getElementById('size5mb');
 
 function initListeners() {
     inputTitle.addEventListener('input', changeTitle);
@@ -79,6 +82,10 @@ function initListeners() {
     articleImageInput.addEventListener('change', updateArticleImageDisplay);
     uploadNewArticle.addEventListener('click', uploadNewImageArticle);
     removeArticle.addEventListener('click', removeImageArticle);
+    cardImageInput.addEventListener('change', updateCardImageDisplay);
+    uploadNewCard.addEventListener('click', uploadNewImageCard);
+    removeCard.addEventListener('click', removeImageCard);
+
 }
 
 function changeTitle(event) {
@@ -122,9 +129,9 @@ function changeDate(event) {
 }
 
 function updateAuthorImageDisplay(event) {
-    const curFiles = event.target.files;
-    if (curFiles.length !== 0) {
-        authorImage.src = window.URL.createObjectURL(curFiles[0]);
+    const authorFiles = event.target.files;
+    if (authorFiles.length !== 0) {
+        authorImage.src = window.URL.createObjectURL(authorFiles[0]);
         uploadNewAvatar.hidden = false;
         removeAvatar.hidden = false;
         upload.hidden = true;
@@ -153,7 +160,7 @@ function updateArticleImageDisplay(event) {
         heroImage10mb.classList.add('main-information__hero-image-10mb-uploaded');
         uploadNewArticle.hidden = false;
         removeArticle.hidden = false;
-        size.hidden = true;
+        size10mb.hidden = true;
     }
 }
 
@@ -164,10 +171,35 @@ function uploadNewImageArticle() {
 function removeImageArticle() {
     uploadNewArticle.hidden = true;
     removeArticle.hidden = true;
-    size.hidden = false;
+    size10mb.hidden = false;
     heroImage10mb.src = 'static/images/placeholder-image-rectangle-10mb.svg';
     articleImageInput.value = '';
     articleImagePreview.src = 'static/images/article-preview.svg';
+}
+
+function updateCardImageDisplay(event) {
+    const cardFiles = event.target.files;
+    if (cardFiles.length !== 0) {
+        heroImage5mb.src = window.URL.createObjectURL(cardFiles[0]);
+        cardImagePreview.src = heroImage5mb.src;
+        heroImage5mb.classList.add('main-information__hero-image-10mb-uploaded');
+        uploadNewCard.hidden = false;
+        removeCard.hidden = false;
+        size5mb.hidden = true;
+    }
+}
+
+function uploadNewImageCard() {
+    cardImageInput.click();
+}
+
+function removeImageCard() {
+    uploadNewCard.hidden = true;
+    removeCard.hidden = true;
+    size5mb.hidden = false;
+    heroImage5mb.src = 'static/images/placeholder-image-rectangle-5mb.svg';
+    cardImageInput.value = '';
+    cardImagePreview.src = 'static/images/post-card-preview.svg';
 }
 
 initListeners();

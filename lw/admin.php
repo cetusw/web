@@ -66,13 +66,21 @@
                 <img src="static/images/trash-red.svg" alt="camera">
                 <span>Remove</span>
               </button>
-              <span class="main-information__format" id="size">Size up to 10mb. Format: png, jpeg, gif.</span>
+              <span class="main-information__format" id="size10mb">Size up to 10mb. Format: png, jpeg, gif.</span>
             </label>
             <label>
               <span>Hero Image</span><br>
               <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" id="hero-image-5mb" alt="Photo">
               <input id="image5mb-input" name="hero-image-small" type="file" required><br>
-              <span class="main-information__ps">Size up to 5mb. Format: png, jpeg, gif.</span>
+              <button type="button" class="main-information__upload-new-card" id="upload-new-card" hidden>
+                <img src="static/images/camera.svg" alt="camera">
+                <span>Upload New</span>
+              </button>
+              <button type="button" class="main-information__remove-card" id="remove-card" hidden>
+                <img src="static/images/trash-red.svg" alt="camera">
+                <span>Remove</span>
+              </button>
+              <span class="main-information__ps" id="size5mb">Size up to 5mb. Format: png, jpeg, gif.</span>
             </label>
           </div>
           <div class="main-information__preview">
