@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сделал загрузку картинки article">
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Пофиксил отправку формы при нажатии кнопок, которые не отправляют форму">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/admin-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/admin-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +136,7 @@
       <workItem from="1714577597773" duration="7334000" />
       <workItem from="1714668101967" duration="7985000" />
       <workItem from="1714713360853" duration="5746000" />
-      <workItem from="1715182538545" duration="30508000" />
+      <workItem from="1715182538545" duration="32020000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -351,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715337471293</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Пофиксил отправку формы при нажатии кнопок, которые не отправляют форму">
+      <option name="closed" value="true" />
+      <created>1715338402600</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1715338402600</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +404,8 @@
     <MESSAGE value="Переделал градиент" />
     <MESSAGE value="Перенёс все в форму | Добавил отображение картинка автора в превью | Поправил отображение элементов при загрузке картинки | Удаление картикни автора" />
     <MESSAGE value="Сделал загрузку картинки article" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал загрузку картинки article" />
+    <MESSAGE value="Пофиксил отправку формы при нажатии кнопок, которые не отправляют форму" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пофиксил отправку формы при нажатии кнопок, которые не отправляют форму" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
