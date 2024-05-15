@@ -27,7 +27,7 @@
         <p>Fill out the form bellow and publish your article</p>
       </div>
       <div class="post-title__button">
-        <button id="button" class="publish">Publish</button>
+        <button id="publish-button" class="publish" type="button">Publish</button>
       </div>
     </div>
     <div class="main-information container">
@@ -117,7 +117,7 @@
       </div>
     <div class="content container">
       <p>Content</p>
-      <label>Post content (plain text)<br><textarea class="content__textarea" name="post-content" placeholder="Type anything you want ..."></textarea></label>
+      <label>Post content (plain text)<br><textarea id="content" class="content__textarea" name="post-content" placeholder="Type anything you want ..." required></textarea></label>
     </div>
   </form>
 </main>

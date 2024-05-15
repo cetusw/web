@@ -6,6 +6,7 @@ let postData = {
     publishDate: '',
     heroImagePost: '',
     heroImageCard: '',
+    content: '',
 }
 
 
@@ -70,6 +71,10 @@ const size10mb = document.getElementById('size10mb');
 const uploadNewCard = document.getElementById('upload-new-card');
 const removeCard = document.getElementById('remove-card');
 const size5mb = document.getElementById('size5mb');
+const publish = document.getElementById('publish-button');
+
+//content
+const content = document.getElementById('content');
 
 function initListeners() {
     inputTitle.addEventListener('input', changeTitle);
@@ -85,7 +90,41 @@ function initListeners() {
     cardImageInput.addEventListener('change', updateCardImageDisplay);
     uploadNewCard.addEventListener('click', uploadNewImageCard);
     removeCard.addEventListener('click', removeImageCard);
+    publish.addEventListener('click', publishPost);
+    content.addEventListener('input', changeContent)
 
+}
+
+function isValidPostData() {
+    return postData.title !== ''
+        && postData.description !== ''
+        && postData.authorName !== ''
+        && postData.authorPhoto !== ''
+        && postData.publishDate !== ''
+        && postData.heroImagePost !== ''
+        && postData.heroImageCard !== ''
+        && postData.content !== '';
+}
+
+function publishPost(event) {
+    if (!isValidPostData) {
+        console.log(postData);
+    } else {
+        alert('Заполнены не все поля')
+    }
+}
+
+async function getBase64FromFile(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            resolve(event.target.result);
+        };
+        reader.onerror = (error) => {
+            reject(error);
+        };
+        reader.readAsDataURL(file);
+    });
 }
 
 function changeTitle(event) {
@@ -96,7 +135,7 @@ function changeTitle(event) {
     } else {
         articlePreviewTitle.textContent = 'New Post';
         postPreviewTitle.textContent = 'New Post';
-        postData.title = event.target.value;
+        postData.title = '';
 
     }
 }
@@ -105,17 +144,21 @@ function changeDescription(event) {
     if (event.target.value !== '') {
         articlePreviewDescription.textContent = event.target.value;
         postPreviewDescription.textContent = event.target.value;
+        postData.description = event.target.value;
     } else {
         articlePreviewDescription.textContent = 'Please, enter any description';
         postPreviewDescription.textContent = 'Please, enter any description';
+        postData.description = '';
     }
 }
 
 function changeAuthor(event) {
     if (event.target.value !== '') {
         postPreviewAuthor.textContent = event.target.value;
+        postData.authorName = event.target.value;
     } else {
         postPreviewAuthor.textContent = 'Enter author name';
+        postData.authorName = '';
     }
 }
 
@@ -123,19 +166,25 @@ function changeDate(event) {
     if (event.target.value !== '') {
         const date = new Date(event.target.value);
         postPreviewDate.textContent = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+        postData.publishDate = postPreviewDate.textContent;
     } else {
         postPreviewDate.textContent = '00/00/0000';
+        postData.publishDate = '';
     }
 }
 
-function updateAuthorImageDisplay(event) {
+async function updateAuthorImageDisplay(event) {
     const authorFiles = event.target.files;
-    if (authorFiles.length !== 0) {
+    let fileType = authorFiles[0].type;
+    if (fileType === 'image/jpg' || fileType === 'image/png' || fileType === 'image/gif' || fileType === 'image/jpeg') {
         authorImage.src = window.URL.createObjectURL(authorFiles[0]);
         uploadNewAvatar.hidden = false;
         removeAvatar.hidden = false;
         upload.hidden = true;
         authorImagePreview.src = authorImage.src;
+        postData.authorPhoto = await getBase64FromFile(authorFiles[0]);
+    } else {
+        alert('Неверный тип файла. Допустимые: png, jpg, jpeg, gif');
     }
 }
 
@@ -146,21 +195,26 @@ function removeImageAvatar(event) {
     authorImage.src = 'static/images/placeholder-image-round.svg';
     authorImageInput.value = '';
     authorImagePreview.src = 'static/images/author-image-preview.svg';
+    postData.authorPhoto = '';
 }
 
 function uploadNewImageAvatar(event) {
     authorImageInput.click();
 }
 
-function updateArticleImageDisplay(event) {
+async function updateArticleImageDisplay(event) {
     const articleFiles = event.target.files;
-    if (articleFiles.length !== 0) {
+    let fileType = articleFiles[0].type;
+    if (fileType === 'image/jpg' || fileType === 'image/png' || fileType === 'image/gif' || fileType === 'image/jpeg') {
         heroImage10mb.src = window.URL.createObjectURL(articleFiles[0]);
         articleImagePreview.src = heroImage10mb.src;
         heroImage10mb.classList.add('main-information__hero-image-10mb-uploaded');
         uploadNewArticle.hidden = false;
         removeArticle.hidden = false;
         size10mb.hidden = true;
+        postData.heroImagePost = await getBase64FromFile(articleFiles[0]);
+    } else {
+        alert('Неверный тип файла. Допустимые: png, jpg, jpeg, gif');
     }
 }
 
@@ -175,17 +229,23 @@ function removeImageArticle() {
     heroImage10mb.src = 'static/images/placeholder-image-rectangle-10mb.svg';
     articleImageInput.value = '';
     articleImagePreview.src = 'static/images/article-preview.svg';
+    postData.heroImagePost = '';
+
 }
 
-function updateCardImageDisplay(event) {
+async function updateCardImageDisplay(event) {
     const cardFiles = event.target.files;
-    if (cardFiles.length !== 0) {
+    let fileType = cardFiles[0].type;
+    if (fileType === 'image/jpg' || fileType === 'image/png' || fileType === 'image/gif' || fileType === 'image/jpeg') {
         heroImage5mb.src = window.URL.createObjectURL(cardFiles[0]);
         cardImagePreview.src = heroImage5mb.src;
         heroImage5mb.classList.add('main-information__hero-image-10mb-uploaded');
         uploadNewCard.hidden = false;
         removeCard.hidden = false;
         size5mb.hidden = true;
+        postData.heroImageCard = await getBase64FromFile(cardFiles[0]);
+    } else {
+        alert('Неверный тип файла. Допустимые: png, jpg, jpeg, gif');
     }
 }
 
@@ -200,6 +260,11 @@ function removeImageCard() {
     heroImage5mb.src = 'static/images/placeholder-image-rectangle-5mb.svg';
     cardImageInput.value = '';
     cardImagePreview.src = 'static/images/post-card-preview.svg';
+    postData.heroImageCard = '';
+}
+
+function changeContent(event) {
+    postData.content = event.target.value;
 }
 
 initListeners();
