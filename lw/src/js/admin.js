@@ -107,7 +107,7 @@ function isValidPostData() {
 }
 
 function publishPost(event) {
-    if (!isValidPostData) {
+    if (isValidPostData) {
         console.log(postData);
     } else {
         alert('Заполнены не все поля')
