@@ -1,12 +1,14 @@
 let postData = {
     title: '',
-    description: '',
-    authorName: '',
-    authorPhoto: '',
-    publishDate: '',
-    heroImagePost: '',
-    heroImageCard: '',
+    subtitle: '',
     content: '',
+    author: '',
+    author_url: '',
+    publish_date: '',
+    image_url: '',
+    /*heroImageCard: '',*/
+    featured: 0,
+    adventure: 0,
 }
 
 
@@ -87,7 +89,7 @@ function initListeners() {
     articleImageInput.addEventListener('change', updateArticleImageDisplay);
     uploadNewArticle.addEventListener('click', uploadNewImageArticle);
     removeArticle.addEventListener('click', removeImageArticle);
-    cardImageInput.addEventListener('change', updateCardImageDisplay);
+    /*cardImageInput.addEventListener('change', updateCardImageDisplay);*/
     uploadNewCard.addEventListener('click', uploadNewImageCard);
     removeCard.addEventListener('click', removeImageCard);
     publish.addEventListener('click', publishPost);
@@ -97,18 +99,32 @@ function initListeners() {
 
 function isValidPostData() {
     return postData.title !== ''
-        && postData.description !== ''
-        && postData.authorName !== ''
-        && postData.authorPhoto !== ''
-        && postData.publishDate !== ''
-        && postData.heroImagePost !== ''
-        && postData.heroImageCard !== ''
+        && postData.subtitle !== ''
+        && postData.author !== ''
+        && postData.author_url !== ''
+        && postData.publish_date !== ''
+        && postData.image_url !== ''
+        /*&& postData.heroImageCard !== ''*/
         && postData.content !== '';
 }
 
-function publishPost(event) {
+async function publishPost(event) {
     if (isValidPostData) {
         console.log(postData);
+        const response = await fetch('http://localhost:8001/api.php', {
+            method: "POST",
+            body: JSON.stringify(postData),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        console.log(response);
+        const json = await response.json();
+        if (response.ok) {
+            console.log("Успех:", JSON.stringify(json));
+         } else {
+             console.log("Proebali with: ", response.status)
+         }
     } else {
         alert('Заполнены не все поля')
     }
@@ -144,21 +160,21 @@ function changeDescription(event) {
     if (event.target.value !== '') {
         articlePreviewDescription.textContent = event.target.value;
         postPreviewDescription.textContent = event.target.value;
-        postData.description = event.target.value;
+        postData.subtitle = event.target.value;
     } else {
         articlePreviewDescription.textContent = 'Please, enter any description';
         postPreviewDescription.textContent = 'Please, enter any description';
-        postData.description = '';
+        postData.subtitle = '';
     }
 }
 
 function changeAuthor(event) {
     if (event.target.value !== '') {
         postPreviewAuthor.textContent = event.target.value;
-        postData.authorName = event.target.value;
+        postData.author = event.target.value;
     } else {
         postPreviewAuthor.textContent = 'Enter author name';
-        postData.authorName = '';
+        postData.author = '';
     }
 }
 
@@ -166,10 +182,10 @@ function changeDate(event) {
     if (event.target.value !== '') {
         const date = new Date(event.target.value);
         postPreviewDate.textContent = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-        postData.publishDate = postPreviewDate.textContent;
+        postData.publish_date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     } else {
         postPreviewDate.textContent = '00/00/0000';
-        postData.publishDate = '';
+        postData.publish_date = '';
     }
 }
 
@@ -182,7 +198,7 @@ async function updateAuthorImageDisplay(event) {
         removeAvatar.hidden = false;
         upload.hidden = true;
         authorImagePreview.src = authorImage.src;
-        postData.authorPhoto = await getBase64FromFile(authorFiles[0]);
+        postData.author_url = await getBase64FromFile(authorFiles[0]);
     } else {
         alert('Неверный тип файла. Допустимые: png, jpg, jpeg, gif');
     }
@@ -195,7 +211,7 @@ function removeImageAvatar(event) {
     authorImage.src = 'static/images/placeholder-image-round.svg';
     authorImageInput.value = '';
     authorImagePreview.src = 'static/images/author-image-preview.svg';
-    postData.authorPhoto = '';
+    postData.author_url = '';
 }
 
 function uploadNewImageAvatar(event) {
@@ -212,7 +228,7 @@ async function updateArticleImageDisplay(event) {
         uploadNewArticle.hidden = false;
         removeArticle.hidden = false;
         size10mb.hidden = true;
-        postData.heroImagePost = await getBase64FromFile(articleFiles[0]);
+        postData.image_url = await getBase64FromFile(articleFiles[0]);
     } else {
         alert('Неверный тип файла. Допустимые: png, jpg, jpeg, gif');
     }
@@ -229,7 +245,7 @@ function removeImageArticle() {
     heroImage10mb.src = 'static/images/placeholder-image-rectangle-10mb.svg';
     articleImageInput.value = '';
     articleImagePreview.src = 'static/images/article-preview.svg';
-    postData.heroImagePost = '';
+    postData.image_url = '';
 
 }
 

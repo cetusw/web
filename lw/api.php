@@ -2,6 +2,34 @@
 
 require_once 'ConnectionProvider.php';
 
+function sendStatusCode400(): void
+{
+	$dataError = array(
+		"message" => "An error occurred",
+		"status" => "error"
+	);
+	$statusCode = 400;
+
+	header('Content-Type: application/json;charset=utf-8');
+	$jsonData = json_encode($dataError);
+	http_response_code($statusCode);
+	echo $jsonData;
+}
+
+function sendStatusCode200(): void
+{
+	$dataError = array(
+		"message" => "This is a sample response",
+		"status" => "success"
+	);
+	$statusCode = 200;
+
+	header('Content-Type: application/json;charset=utf-8');
+	$jsonData = json_encode($dataError);
+	http_response_code($statusCode);
+	echo $jsonData;
+}
+
 function saveFile(string $file, string $data): void
 {
 	$myFile = fopen($file, 'w');

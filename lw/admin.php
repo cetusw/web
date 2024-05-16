@@ -27,7 +27,7 @@
         <p>Fill out the form bellow and publish your article</p>
       </div>
       <div class="post-title__button">
-        <button id="publish-button" class="publish" type="button">Publish</button>
+        <button id="publish-button" class="publish" type="submit">Publish</button>
       </div>
     </div>
     <div class="main-information container">
@@ -71,7 +71,7 @@
             <label>
               <span>Hero Image</span><br>
               <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" id="hero-image-5mb" alt="Photo">
-              <input id="image5mb-input" name="hero-image-small" type="file" required><br>
+              <input id="image5mb-input" name="hero-image-small" type="file"><br>
               <button type="button" class="main-information__upload-new-card" id="upload-new-card" hidden>
                 <img src="static/images/camera.svg" alt="camera">
                 <span>Upload New</span>
