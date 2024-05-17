@@ -19,7 +19,7 @@ function sendStatusCode400(): void
 function sendStatusCode200(): void
 {
 	$dataError = array(
-		"message" => "This is a sample response",
+		"message" => "All good",
 		"status" => "success"
 	);
 	$statusCode = 200;
@@ -36,13 +36,13 @@ function saveFile(string $file, string $data): void
 	if ($myFile) {
 		$result = fwrite($myFile, $data);
 		if ($result) {
-			echo 'Данные успешно сохранены в файл ';
+			sendStatusCode200();
 		} else {
-			echo 'Произошла ошибка при сохранении данных в файл ';
+			sendStatusCode400();
 		}
 		fclose($myFile);
 	} else {
-		echo 'Произошла ошибка при открытии файла ';
+		sendStatusCode400();
 	}
 }
 
@@ -62,13 +62,14 @@ function savePostToDatabase(mysqli $conn, $data): bool
 	$imageUrl = saveImage($data['image_url'], $imageName);
 	$imageName = strtolower(str_replace(' ', '-', $data['author']));
 	$authorUrl = saveImage($data['author_url'], $imageName);
+	$imageName = strtolower(str_replace(' ', '-', $data['title']) . '-' . 'small');
+	$imageUrlSmall = saveImage($data['image_url_small'], $imageName);
 	$data['publish_date'] = strtotime($data['publish_date']);
-	$sql = "INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, adventure)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, adventure, image_url_small)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 	$stmt = $conn->prepare($sql);
-
 	if ($stmt) {
-		$stmt->bind_param('sssssssii', $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure']);
+		$stmt->bind_param('sssssssiis', $data['title'], $data['subtitle'], $data['content'], $data['author'], $authorUrl, $data['publish_date'], $imageUrl, $data['featured'], $data['adventure'], $imageUrlSmall);
 		if ($stmt->execute()) {
 			return true;
 		} else {
@@ -90,14 +91,14 @@ function dataIsCorrect($data): bool
 			case 'author':
 			case 'publish_date':
 				if ((!preg_match(pattern: '~^[a-zA-Z0-9 .,!@#$%^&*():;{}<>/+=_-]+$~', subject: $value)) || (gettype($value) !== 'string')) {
-					echo 'Введён неправильный ' . $key;
+					sendStatusCode400();
 				  return false;
 			  }
 				break;
 			case 'featured':
 			case 'adventure':
 				if ((!preg_match(pattern: '~^[0-1]+$~', subject: $value)) || (gettype($value) !== 'integer')) {
-					echo 'Введён неправильный ' . $key;
+					sendStatusCode400();
 					return false;
 				}
 				break;

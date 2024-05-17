@@ -20,7 +20,7 @@
 </header>
 
 <main>
-  <form class="main-information__form">
+  <form class="form container">
     <div class="post-title container">
       <div class="post-title__text">
         <h1>New Post</h1>
@@ -30,7 +30,11 @@
         <button id="publish-button" class="publish" type="submit">Publish</button>
       </div>
     </div>
-    <div class="main-information container">
+    <!--<div class="error-message">
+      <img src="static/images/alert-circle.svg" alt="alert-circle">
+      <p>Whoops! Some fields need your attention :o</p>
+    </div>-->
+    <div class="main-information">
       <h2>Main Information</h2>
         <div class="main-information__content">
           <div class="main-information__inputs">
@@ -115,7 +119,7 @@
           </div>
         </div>
       </div>
-    <div class="content container">
+    <div class="content">
       <p>Content</p>
       <label>Post content (plain text)<br><textarea id="content" class="content__textarea" name="post-content" placeholder="Type anything you want ..." required></textarea></label>
     </div>

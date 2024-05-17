@@ -1,5 +1,5 @@
 <div class="recent-post">
-  <img class="recent-post__image" src="<?= $post['image_url']?>" alt="Error">
+  <img class="recent-post__image" src="<?= $post['image_url_small']?>" alt="Error">
   <div class="recent-post__content">
     <h5 class="recent-post__title"><?= $post['title']?></h5>
     <a title='<?= $post['title'] ?>' href='/post?id=<?= $post['id'] ?>' class="recent-post__subtitle">

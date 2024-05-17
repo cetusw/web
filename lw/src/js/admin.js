@@ -6,9 +6,9 @@ let postData = {
     author_url: '',
     publish_date: '',
     image_url: '',
-    /*heroImageCard: '',*/
     featured: 0,
     adventure: 0,
+    image_url_small: '',
 }
 
 
@@ -89,7 +89,7 @@ function initListeners() {
     articleImageInput.addEventListener('change', updateArticleImageDisplay);
     uploadNewArticle.addEventListener('click', uploadNewImageArticle);
     removeArticle.addEventListener('click', removeImageArticle);
-    /*cardImageInput.addEventListener('change', updateCardImageDisplay);*/
+    cardImageInput.addEventListener('change', updateCardImageDisplay);
     uploadNewCard.addEventListener('click', uploadNewImageCard);
     removeCard.addEventListener('click', removeImageCard);
     publish.addEventListener('click', publishPost);
@@ -104,7 +104,7 @@ function isValidPostData() {
         && postData.author_url !== ''
         && postData.publish_date !== ''
         && postData.image_url !== ''
-        /*&& postData.heroImageCard !== ''*/
+        && postData.image_url_small !== ''
         && postData.content !== '';
 }
 
@@ -118,19 +118,18 @@ async function publishPost(event) {
                 "Content-Type": "application/json",
             },
         });
-        console.log(response);
         const json = await response.json();
         if (response.ok) {
             console.log("Успех:", JSON.stringify(json));
          } else {
-             console.log("Proebali with: ", response.status)
+             console.log("Провал: ", response.status)
          }
     } else {
         alert('Заполнены не все поля')
     }
 }
 
-async function getBase64FromFile(file) {
+function getBase64FromFile(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = (event) => {
@@ -259,7 +258,7 @@ async function updateCardImageDisplay(event) {
         uploadNewCard.hidden = false;
         removeCard.hidden = false;
         size5mb.hidden = true;
-        postData.heroImageCard = await getBase64FromFile(cardFiles[0]);
+        postData.image_url_small = await getBase64FromFile(cardFiles[0]);
     } else {
         alert('Неверный тип файла. Допустимые: png, jpg, jpeg, gif');
     }
@@ -276,13 +275,15 @@ function removeImageCard() {
     heroImage5mb.src = 'static/images/placeholder-image-rectangle-5mb.svg';
     cardImageInput.value = '';
     cardImagePreview.src = 'static/images/post-card-preview.svg';
-    postData.heroImageCard = '';
+    postData.image_url_small = '';
 }
 
 function changeContent(event) {
     postData.content = event.target.value;
 }
 
-initListeners();
+window.addEventListener('load', function() {
+    initListeners();
+});
 
 
