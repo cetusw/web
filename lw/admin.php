@@ -27,18 +27,26 @@
         <p>Fill out the form bellow and publish your article</p>
       </div>
       <div class="post-title__button">
-        <button id="publish-button" class="publish" type="submit">Publish</button>
+        <button id="publish-button" class="post-title__publish" type="submit">Publish</button>
       </div>
     </div>
-    <!--<div class="error-message">
-      <img src="static/images/alert-circle.svg" alt="alert-circle">
-      <p>Whoops! Some fields need your attention :o</p>
-    </div>-->
+    <div class="form__all-is-ok" id="form-is-ok" hidden>
+      <div class="form__all-is-ok-content">
+        <img src="static/images/check-circle.svg" alt="alert-circle">
+        <p>Publish Complete!</p>
+      </div>
+    </div>
+    <div class="form__required-fields-empty" id="required-fields-empty" hidden>
+      <div class="form__required-fields-empty-content">
+        <img src="static/images/alert-circle.svg" alt="alert-circle">
+        <p>Whoops! Some fields need your attention :o</p>
+      </div>
+    </div>
     <div class="main-information">
       <h2>Main Information</h2>
         <div class="main-information__content">
           <div class="main-information__inputs">
-            <label>Title<br><input id="title-input" name="title" type="text" placeholder="New Post" maxlength="30" required></label>
+            <label>Title<br><input class="input-error" id="title-input" name="title" type="text" placeholder="New Post" maxlength="30" required></label>
             <label>Short description<br><input id="description-input" name="description" type="text" placeholder="Please, enter any description" maxlength="30" required></label>
             <label>Author name<br><input id="author-input" name="author-name" type="text" maxlength="30" required></label>
             <label>
@@ -47,12 +55,16 @@
               <div class="main-information__author-image-upload">
                 <img class="main-information__author-image" src="static/images/placeholder-image-round.svg" id="author-image" alt="Photo">
                 <button type="button" class="main-information__upload-new-avatar" id="upload-new-avatar" hidden>
-                  <img src="static/images/camera.svg" alt="camera">
-                  <span>Upload New</span>
+                  <div class="main-information__upload-new-avatar-content">
+                    <img src="static/images/camera.svg" alt="camera">
+                    <p>Upload New</p>
+                  </div>
                 </button>
                 <button type="button" class="main-information__remove-avatar" id="remove-avatar" hidden>
-                  <img src="static/images/trash-red.svg" alt="camera">
-                  <span>Remove</span>
+                  <div class="main-information__remove-avatar-content">
+                    <img src="static/images/trash-red.svg" alt="camera">
+                    <p>Remove</p>
+                  </div>
                 </button>
                 <span class="main-information__author-image-upload-text" id="upload">Upload</span>
               </div>
@@ -63,12 +75,16 @@
               <img class="main-information__hero-image-10mb" src="static/images/placeholder-image-rectangle-10mb.svg" id="hero-image-10mb" alt="Photo">
               <input id="image10mb-input" name="hero-image" type="file" required><br>
               <button type="button" class="main-information__upload-new-article" id="upload-new-article" hidden>
-                <img src="static/images/camera.svg" alt="camera">
-                <span>Upload New</span>
+                <div class="main-information__upload-new-article-content">
+                  <img src="static/images/camera.svg" alt="camera">
+                  <p>Upload New</p>
+                </div>
               </button>
               <button type="button" class="main-information__remove-article" id="remove-article" hidden>
-                <img src="static/images/trash-red.svg" alt="camera">
-                <span>Remove</span>
+                <div class="main-information__remove-article-content">
+                  <img src="static/images/trash-red.svg" alt="camera">
+                  <p>Remove</p>
+                </div>
               </button>
               <span class="main-information__format" id="size10mb">Size up to 10mb. Format: png, jpeg, gif.</span>
             </label>
@@ -77,12 +93,16 @@
               <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" id="hero-image-5mb" alt="Photo">
               <input id="image5mb-input" name="hero-image-small" type="file"><br>
               <button type="button" class="main-information__upload-new-card" id="upload-new-card" hidden>
-                <img src="static/images/camera.svg" alt="camera">
-                <span>Upload New</span>
+                <div class="main-information__upload-new-card-content">
+                  <img src="static/images/camera.svg" alt="camera">
+                  <p>Upload New</p>
+                </div>
               </button>
               <button type="button" class="main-information__remove-card" id="remove-card" hidden>
-                <img src="static/images/trash-red.svg" alt="camera">
-                <span>Remove</span>
+                <div class="main-information__remove-card-content">
+                  <img src="static/images/trash-red.svg" alt="camera">
+                  <p>Remove</p>
+                </div>
               </button>
               <span class="main-information__ps" id="size5mb">Size up to 5mb. Format: png, jpeg, gif.</span>
             </label>
@@ -128,6 +148,6 @@
 
 <footer class="footer-block">
 </footer>
-<script src="src/js/admin.js" type="application/javascript"></script>
+<script src="static/js/admin.js" type="application/javascript"></script>
 </body>
 </html>

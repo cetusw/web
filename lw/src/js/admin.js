@@ -78,6 +78,12 @@ const publish = document.getElementById('publish-button');
 //content
 const content = document.getElementById('content');
 
+//notifications
+const requiredFieldsNotification = document.getElementById('required-fields-empty');
+const formIsOk = document.getElementById('form-is-ok');
+
+const requiredFields = document.querySelectorAll('[required]');
+
 function initListeners() {
     inputTitle.addEventListener('input', changeTitle);
     inputDescription.addEventListener('input', changeDescription);
@@ -106,10 +112,14 @@ function isValidPostData() {
         && postData.image_url !== ''
         && postData.image_url_small !== ''
         && postData.content !== '';
+
 }
 
 async function publishPost(event) {
-    if (isValidPostData) {
+    event.preventDefault();
+    if (isValidPostData() === true) {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = false;
         console.log(postData);
         const response = await fetch('http://localhost:8001/api.php', {
             method: "POST",
@@ -120,12 +130,20 @@ async function publishPost(event) {
         });
         const json = await response.json();
         if (response.ok) {
-            console.log("Успех:", JSON.stringify(json));
-         } else {
-             console.log("Провал: ", response.status)
-         }
+            console.log("Успех: ", JSON.stringify(json));
+        } else {
+            console.log("Провал: ", response.status);
+        }
     } else {
-        alert('Заполнены не все поля')
+        for (const field of requiredFields) {
+            if (field.value === '') {
+                requiredFieldsNotification.hidden = false;
+                formIsOk.hidden = true;
+                console.log('1');
+                field.classList.add('input-error');
+                break;
+            }
+        }
     }
 }
 
@@ -144,10 +162,14 @@ function getBase64FromFile(file) {
 
 function changeTitle(event) {
     if (event.target.value !== '') {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         articlePreviewTitle.textContent = event.target.value;
         postPreviewTitle.textContent = event.target.value;
         postData.title = event.target.value;
     } else {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         articlePreviewTitle.textContent = 'New Post';
         postPreviewTitle.textContent = 'New Post';
         postData.title = '';
@@ -157,10 +179,14 @@ function changeTitle(event) {
 
 function changeDescription(event) {
     if (event.target.value !== '') {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         articlePreviewDescription.textContent = event.target.value;
         postPreviewDescription.textContent = event.target.value;
         postData.subtitle = event.target.value;
     } else {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         articlePreviewDescription.textContent = 'Please, enter any description';
         postPreviewDescription.textContent = 'Please, enter any description';
         postData.subtitle = '';
@@ -169,9 +195,13 @@ function changeDescription(event) {
 
 function changeAuthor(event) {
     if (event.target.value !== '') {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         postPreviewAuthor.textContent = event.target.value;
         postData.author = event.target.value;
     } else {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         postPreviewAuthor.textContent = 'Enter author name';
         postData.author = '';
     }
@@ -179,16 +209,22 @@ function changeAuthor(event) {
 
 function changeDate(event) {
     if (event.target.value !== '') {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         const date = new Date(event.target.value);
         postPreviewDate.textContent = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
         postData.publish_date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     } else {
+        requiredFieldsNotification.hidden = true;
+        formIsOk.hidden = true;
         postPreviewDate.textContent = '00/00/0000';
         postData.publish_date = '';
     }
 }
 
 async function updateAuthorImageDisplay(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     const authorFiles = event.target.files;
     let fileType = authorFiles[0].type;
     if (fileType === 'image/jpg' || fileType === 'image/png' || fileType === 'image/gif' || fileType === 'image/jpeg') {
@@ -204,6 +240,8 @@ async function updateAuthorImageDisplay(event) {
 }
 
 function removeImageAvatar(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     uploadNewAvatar.hidden = true;
     removeAvatar.hidden = true;
     upload.hidden = false;
@@ -214,10 +252,14 @@ function removeImageAvatar(event) {
 }
 
 function uploadNewImageAvatar(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     authorImageInput.click();
 }
 
 async function updateArticleImageDisplay(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     const articleFiles = event.target.files;
     let fileType = articleFiles[0].type;
     if (fileType === 'image/jpg' || fileType === 'image/png' || fileType === 'image/gif' || fileType === 'image/jpeg') {
@@ -234,10 +276,14 @@ async function updateArticleImageDisplay(event) {
 }
 
 function uploadNewImageArticle() {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     articleImageInput.click();
 }
 
 function removeImageArticle() {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     uploadNewArticle.hidden = true;
     removeArticle.hidden = true;
     size10mb.hidden = false;
@@ -249,6 +295,8 @@ function removeImageArticle() {
 }
 
 async function updateCardImageDisplay(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     const cardFiles = event.target.files;
     let fileType = cardFiles[0].type;
     if (fileType === 'image/jpg' || fileType === 'image/png' || fileType === 'image/gif' || fileType === 'image/jpeg') {
@@ -265,10 +313,14 @@ async function updateCardImageDisplay(event) {
 }
 
 function uploadNewImageCard() {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     cardImageInput.click();
 }
 
 function removeImageCard() {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     uploadNewCard.hidden = true;
     removeCard.hidden = true;
     size5mb.hidden = false;
@@ -279,6 +331,8 @@ function removeImageCard() {
 }
 
 function changeContent(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     postData.content = event.target.value;
 }
 
