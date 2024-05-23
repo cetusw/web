@@ -149,5 +149,6 @@
 <footer class="footer-block">
 </footer>
 <script src="static/js/admin.js" type="application/javascript"></script>
+<script src="static/js/inputs-logic.js" type="application/javascript"></script>
 </body>
 </html>
