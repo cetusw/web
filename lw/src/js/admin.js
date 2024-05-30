@@ -58,6 +58,7 @@ const content = document.getElementById('content');
 //notifications
 const requiredFieldsNotification = document.getElementById('required-fields-empty');
 const formIsOk = document.getElementById('form-is-ok');
+const showTitleIsRequired = document.getElementById('title-required');
 
 const requiredFields = document.querySelectorAll('[required]');
 
@@ -92,33 +93,74 @@ function isValidPostData() {
 
 }
 
+function clearFields() {
+    inputTitle.value = '';
+    inputDescription.value = '';
+    inputDate.value = '';
+    inputAuthor.value = '';
+    removeImageCard();
+    removeImageAvatar();
+    removeImageArticle();
+    content.value = '';
+    postData.title = '';
+    postData.subtitle = '';
+    postData.author = '';
+    postData.author_url = '';
+    postData.publish_date = '';
+    postData.image_url = '';
+    postData.image_url_small = '';
+    postData.content = '';
+}
+
+function synchroniseFields() {
+    articlePreviewTitle.textContent = postData.title;
+    postPreviewTitle.textContent = postData.title;
+
+    articlePreviewDescription.textContent = postData.subtitle;
+    postPreviewDescription.textContent = postData.subtitle;
+
+    postPreviewAuthor.textContent = postData.author;
+
+    postPreviewDate.textContent = postData.publish_date;
+}
+
 async function publishPost(event) {
     event.preventDefault();
-    if (isValidPostData() === true) {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = false;
-        console.log(postData);
+    if (isValidPostData()) {
+        const stringifyData = JSON.stringify(postData)
+        console.log(stringifyData);
         const response = await fetch('http://localhost:8001/api.php', {
             method: "POST",
-            body: JSON.stringify(postData),
+            body: stringifyData,
             headers: {
                 "Content-Type": "application/json",
             },
         });
+        console.log(response);
         const json = await response.json();
         if (response.ok) {
             console.log("Успех: ", JSON.stringify(json));
+            clearFields();
+            synchroniseFields();
+            formIsOk.hidden = false;
+            setTimeout(() => {
+                formIsOk.hidden = true;
+            }, 2000);
         } else {
             console.log("Провал: ", response.status);
         }
     } else {
-        for (const field of requiredFields) {
-            if (field.value === '') {
+        for (let field of requiredFields) {
+            if (field.value.trim() === '') {
                 requiredFieldsNotification.hidden = false;
                 formIsOk.hidden = true;
-                console.log('1');
-                field.classList.add('input-error');
-                break;
+
+                /*const errorMessageElement = document.createElement('p');
+                errorMessageElement.textContent = 'Field is required';
+                errorMessageElement.style.color = 'rgba(232, 105, 97, 1)';
+
+                field.parentNode.insertBefore(errorMessageElement, field.nextSibling);*/
+                field.style.borderBottom = '1px solid rgba(232, 105, 97, 1)';
             }
         }
     }
@@ -138,64 +180,51 @@ function getBase64FromFile(file) {
 }
 
 function changeTitle(event) {
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
     if (event.target.value !== '') {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        articlePreviewTitle.textContent = event.target.value;
-        postPreviewTitle.textContent = event.target.value;
         postData.title = event.target.value;
+        synchroniseFields();
     } else {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        articlePreviewTitle.textContent = 'New Post';
-        postPreviewTitle.textContent = 'New Post';
         postData.title = '';
-
+        synchroniseFields();
     }
 }
 
 function changeDescription(event) {
-    if (event.target.value !== '') {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        articlePreviewDescription.textContent = event.target.value;
-        postPreviewDescription.textContent = event.target.value;
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
+    if (event.target.value) {
         postData.subtitle = event.target.value;
+        synchroniseFields();
     } else {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        articlePreviewDescription.textContent = 'Please, enter any description';
-        postPreviewDescription.textContent = 'Please, enter any description';
         postData.subtitle = '';
+        synchroniseFields();
     }
 }
 
 function changeAuthor(event) {
-    if (event.target.value !== '') {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        postPreviewAuthor.textContent = event.target.value;
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
+    if (event.target.value) {
         postData.author = event.target.value;
+        synchroniseFields();
     } else {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        postPreviewAuthor.textContent = 'Enter author name';
         postData.author = '';
+        synchroniseFields();
     }
 }
 
 function changeDate(event) {
-    if (event.target.value !== '') {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
+    requiredFieldsNotification.hidden = true;
+    formIsOk.hidden = true;
+    if (event.target.value) {
         const date = new Date(event.target.value);
-        postPreviewDate.textContent = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
         postData.publish_date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        synchroniseFields();
     } else {
-        requiredFieldsNotification.hidden = true;
-        formIsOk.hidden = true;
-        postPreviewDate.textContent = '00/00/0000';
         postData.publish_date = '';
+        synchroniseFields();
     }
 }
 

@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Сделал полную публикацию поста">
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Доверстал login">
+      <change afterPath="$PROJECT_DIR$/api-login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/post.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/admin-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/admin-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/login-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/login-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +28,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -47,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/var/www/web/lw&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/yogurt/Documents/projects/php/php-project",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora_aws&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
@@ -140,6 +149,11 @@
       <workItem from="1715968454888" duration="2067000" />
       <workItem from="1716016385062" duration="9000" />
       <workItem from="1716020170681" duration="1000" />
+      <workItem from="1716403225723" duration="18394000" />
+      <workItem from="1716486823613" duration="2841000" />
+      <workItem from="1716496828864" duration="7270000" />
+      <workItem from="1716505152907" duration="8127000" />
+      <workItem from="1717083686011" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -413,7 +427,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715928686548</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Исправил валидацию | Добавил глобальную реакцию на некорректное заполнение полей | Создал страницу login и поставил ей фон">
+      <option name="closed" value="true" />
+      <created>1716413078886</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1716413078886</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Доверстал login">
+      <option name="closed" value="true" />
+      <created>1716469409249</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1716469409249</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,8 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлен новый проект, в старом исправлен margin у картинки" />
-    <MESSAGE value="Полностью сделана шапка, начат блок с постами" />
     <MESSAGE value="Сделано &quot;Избранное&quot;, начат блок &quot;Почседние&quot;" />
     <MESSAGE value="Страница +- готова, требуется проверка" />
     <MESSAGE value="Исправлен БЭМ, табуляция в коде" />
@@ -456,7 +484,9 @@
     <MESSAGE value="Поправил условие валидации" />
     <MESSAGE value="Сукааааа, ёбаный рот этого responsa | Сделал ебаную публикацию постов, пока без картинки карточки" />
     <MESSAGE value="Сделал полную публикацию поста" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал полную публикацию поста" />
+    <MESSAGE value="Исправил валидацию | Добавил глобальную реакцию на некорректное заполнение полей | Создал страницу login и поставил ей фон" />
+    <MESSAGE value="Доверстал login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доверстал login" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -27,7 +27,6 @@ function sendStatusCode200(): void
 	header('Content-Type: application/json;charset=utf-8');
 	$jsonData = json_encode($dataError);
 	http_response_code($statusCode);
-	echo $jsonData;
 }
 
 function saveFile(string $file, string $data): void
@@ -116,6 +115,7 @@ if ($method === 'POST') {
 		savePostToDatabase($connection, $dataAsArray);
 	}
 	closeDBConnection($connection);
+	echo $dataAsJson;
 } else {
 	echo 'Метод не POST';
 }

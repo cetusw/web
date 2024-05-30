@@ -46,8 +46,8 @@
       <h2>Main Information</h2>
         <div class="main-information__content">
           <div class="main-information__inputs">
-            <label>Title<br><input class="input-error" id="title-input" name="title" type="text" placeholder="New Post" maxlength="30" required></label>
-            <label>Short description<br><input id="description-input" name="description" type="text" placeholder="Please, enter any description" maxlength="30" required></label>
+            <label>Title<br><input id="title-input" name="title" type="text" maxlength="30" required></label>
+            <label>Short description<br><input id="description-input" name="description" type="text" maxlength="30" required></label>
             <label>Author name<br><input id="author-input" name="author-name" type="text" maxlength="30" required></label>
             <label>
               Author Photo<br>
@@ -91,7 +91,7 @@
             <label>
               <span>Hero Image</span><br>
               <img class="main-information__hero-image-5mb" src="static/images/placeholder-image-rectangle-5mb.svg" id="hero-image-5mb" alt="Photo">
-              <input id="image5mb-input" name="hero-image-small" type="file"><br>
+              <input id="image5mb-input" name="hero-image-small" type="file" required><br>
               <button type="button" class="main-information__upload-new-card" id="upload-new-card" hidden>
                 <div class="main-information__upload-new-card-content">
                   <img src="static/images/camera.svg" alt="camera">
@@ -116,8 +116,8 @@
                   <div class="main-information__bullet"></div>
                   <div class="main-information__bullet"></div>
                 </div>
-                <p class="main-information__article-title" id="article-preview-title">New Post</p>
-                <p class="main-information__article-description" id="article-preview-description">Please, enter any description</p>
+                <p class="main-information__article-title" id="article-preview-title"></p>
+                <p class="main-information__article-description" id="article-preview-description"></p>
                 <img class="main-information__article-image-preview" src="static/images/article-preview.svg" id="article-image-preview" alt="Article preview">
               </div>
             </div>
@@ -126,13 +126,13 @@
               <div class="main-information__post">
                 <img class="main-information__card-image-preview" src="static/images/post-card-preview.svg" id="card-image-preview" alt="Author Image">
                 <div class="main-information__post-header">
-                  <p class="main-information__post-title" id="post-preview-title">New Post</p>
-                  <p class="main-information__post-description" id="post-preview-description">Please, enter any description</p>
+                  <p class="main-information__post-title" id="post-preview-title"></p>
+                  <p class="main-information__post-description" id="post-preview-description"></p>
                 </div>
                 <div class="main-information__post-footer">
                   <img src="static/images/author-image-preview.svg" id="author-image-preview" alt="Author Image">
-                  <span class="main-information__author-name" id="post-preview-author">Enter author name</span>
-                  <span class="main-information__publish-date" id="post-preview-date">00/00/0000</span>
+                  <span class="main-information__author-name" id="post-preview-author"></span>
+                  <span class="main-information__publish-date" id="post-preview-date"></span>
                 </div>
               </div>
             </div>
