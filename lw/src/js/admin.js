@@ -145,7 +145,10 @@ async function publishPost(event) {
             formIsOk.hidden = false;
             setTimeout(() => {
                 formIsOk.hidden = true;
-            }, 2000);
+            }, 1000);
+            for (const input of inputs) {
+                inputBlur(input);
+            }
         } else {
             console.log("Провал: ", response.status);
         }
