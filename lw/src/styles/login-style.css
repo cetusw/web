@@ -38,8 +38,22 @@ body {
 }
 
 .login__required-fields-empty {
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     width: 386px;
+    background-color: rgba(255, 235, 234, 1);
+    margin: 0 auto 40px auto;
+    border-radius: 5px;
+    border-left: 2px solid rgba(232, 105, 97, 1);
+    font: 400 14px/20px "Oxygen", sans-serif;
+    padding: 10px 0 10px 12px;
+}
+
+.login__required-fields-empty.show {
     height: 24px;
+    opacity: 1;
+    width: 386px;
     background-color: rgba(255, 235, 234, 1);
     margin: 0 auto 40px auto;
     border-radius: 5px;
@@ -166,7 +180,7 @@ input {
     border-color: rgba(221, 120, 63, 0.8);
     width: 85px;
     height: 42px;
-    margin: auto 7px auto auto;
+    margin: 3px 0 0 3px;
 }
 
 .login__button:focus {

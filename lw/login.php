@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="static/styles/login-style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+  <script src="src/js/login.js" type="application/javascript"></script>
+  <script src="static/js/inputs-logic.js" type="application/javascript"></script>
 </head>
 <body>
-
 <main>
   <div class="login">
     <div class="login__content">
@@ -19,8 +21,8 @@
     </div>
     <form class="login__form">
       <h1>Log In</h1>
-      <div class="login__required-fields-empty" id="required-fields-empty" hidden>
-        <div class="login__required-fields-empty-content">
+      <div class="login__required-fields-empty" id="required-fields-empty">
+        <div class="login__required-fields-empty-content" hidden>
           <img src="static/images/alert-circle.svg" alt="alert-circle">
           <p>Email or password is incorrect.</p>
         </div>
@@ -39,7 +41,5 @@
 
 <footer class="footer-block">
 </footer>
-<script src="src/js/login.js" type="application/javascript"></script>
-<script src="static/js/inputs-logic.js" type="application/javascript"></script>
 </body>
 </html>

@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="static/styles/admin-style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+  <script src="static/js/admin.js" type="application/javascript"></script>
+  <script src="static/js/inputs-logic.js" type="application/javascript"></script>
 </head>
 <body>
 
@@ -13,7 +16,7 @@
   <div class="header-block__content container">
     <a href="/admin"><img class="header-block__logo" src="static/images/escape-author.svg" alt="Logo"></a>
     <div class="header-block__account">
-      <div class="header-block__author-image">N</div>
+      <div class="header-block__author-image"><?= $dataAsArray['email'] ?></div>
       <a href="/home"><img class="header-block__logout-icon" src="static/images/log-out.svg" alt="Logout icon"></a>
     </div>
   </div>
@@ -148,7 +151,5 @@
 
 <footer class="footer-block">
 </footer>
-<script src="static/js/admin.js" type="application/javascript"></script>
-<script src="static/js/inputs-logic.js" type="application/javascript"></script>
 </body>
 </html>

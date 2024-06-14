@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Исправил отправку поста">
+    <list default="true" id="e1e4eb26-0680-4efb-a2ba-0a35216fd011" name="Changes" comment="Добавил поиск пользователя, всё остальное пытался...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api-login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/inputs-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/inputs-logic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/login-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/login-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +153,11 @@
       <workItem from="1716496828864" duration="7270000" />
       <workItem from="1716505152907" duration="8127000" />
       <workItem from="1717083686011" duration="640000" />
-      <workItem from="1717093990995" duration="11891000" />
+      <workItem from="1717093990995" duration="12284000" />
+      <workItem from="1717132217098" duration="5262000" />
+      <workItem from="1718288138267" duration="26000" />
+      <workItem from="1718368986655" duration="7315000" />
+      <workItem from="1718386264612" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены шапка, картинки, текст, подвал">
       <option name="closed" value="true" />
@@ -447,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717101701744</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Добавил поиск пользователя, всё остальное пытался...">
+      <option name="closed" value="true" />
+      <created>1717106374644</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1717106374644</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Страница +- готова, требуется проверка" />
     <MESSAGE value="Исправлен БЭМ, табуляция в коде" />
     <MESSAGE value="Сделаны правки в странице блога" />
     <MESSAGE value="Сохранение картинки через api" />
@@ -490,7 +505,8 @@
     <MESSAGE value="Исправил валидацию | Добавил глобальную реакцию на некорректное заполнение полей | Создал страницу login и поставил ей фон" />
     <MESSAGE value="Доверстал login" />
     <MESSAGE value="Исправил отправку поста" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил отправку поста" />
+    <MESSAGE value="Добавил поиск пользователя, всё остальное пытался..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил поиск пользователя, всё остальное пытался..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
