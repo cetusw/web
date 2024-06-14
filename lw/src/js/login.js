@@ -9,7 +9,8 @@ window.addEventListener('load', function() {
     const loginButton = document.getElementById('login');
 
     const requiredFieldsNotification = document.getElementById('required-fields-empty');
-    const requiredLoginFields = document.querySelectorAll('[required]');
+    const dataIsIncorrectNotification = document.getElementById('data-is-incorrect');
+    const emailIsRequiredNotification = document.getElementById('login__email-is-required')
 
     //inputs
     const emailInput = document.getElementById('input-email');
@@ -20,6 +21,11 @@ window.addEventListener('load', function() {
         emailInput.addEventListener('input', writeEmail);
         passwordInput.addEventListener('input', writePassword);
         loginButton.addEventListener('click', authorization);
+    }
+
+    function clearNotifications() {
+        requiredFieldsNotification.classList.remove('show');
+        dataIsIncorrectNotification.classList.remove('show');
     }
 
     function toggleVisibility(event) {
@@ -44,7 +50,7 @@ window.addEventListener('load', function() {
     async function authorization(event) {
         event.preventDefault();
         if (isValidPostData()) {
-            requiredFieldsNotification.classList.remove('show');
+            clearNotifications();
             console.log(userData);
             const response = await fetch('/api/login', {
                 method: "POST",
@@ -57,12 +63,12 @@ window.addEventListener('load', function() {
                 window.location.href = '/admin';
                 console.log("Успех: ", JSON.stringify(userData));
             } else {
+                dataIsIncorrectNotification.classList.add('show');
                 console.log("Провал: ", response.status);
             }
         } else {
             requiredFieldsNotification.classList.add('show');
             if (!validateEmail(userData.email)) {
-                console.log(userData.email)
                 emailInput.style.borderBottom = '1px solid rgba(232, 105, 97, 1)';
             }
             if (userData.password.length < 6) {
@@ -72,7 +78,7 @@ window.addEventListener('load', function() {
     }
 
     function writeEmail(event) {
-        requiredFieldsNotification.classList.remove('show');
+        clearNotifications();
         if (event.target.value !== '') {
             userData.email = event.target.value;
         } else {
@@ -82,7 +88,7 @@ window.addEventListener('load', function() {
     }
 
     function writePassword(event) {
-        requiredFieldsNotification.classList.remove('show');
+        clearNotifications();
         if (event.target.value !== '') {
             userData.password = event.target.value;
         } else {

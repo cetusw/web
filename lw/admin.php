@@ -1,3 +1,14 @@
+<?php
+  session_name('auth');
+  session_start();
+  $email = $_SESSION['email'] ?? null;
+  $userId = $_SESSION['user_id'] ?? null;
+
+  if ($email === null) {
+    http_response_code(401);
+    header("Location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +27,8 @@
   <div class="header-block__content container">
     <a href="/admin"><img class="header-block__logo" src="static/images/escape-author.svg" alt="Logo"></a>
     <div class="header-block__account">
-      <div class="header-block__author-image"><?= $dataAsArray['email'] ?></div>
-      <a href="/home"><img class="header-block__logout-icon" src="static/images/log-out.svg" alt="Logout icon"></a>
+      <div class="header-block__author-image" style="background-color: rgba(<?= ($userId * 100) % 255 ?>, <?= ($userId * 200) % 255 ?>, <?= ($userId * 300) % 255 ?>, 1)"><?= strtoupper($email[0]) ?></div>
+      <a href="/logout"><img class="header-block__logout-icon" src="static/images/log-out.svg" alt="Logout icon"></a>
     </div>
   </div>
 </header>

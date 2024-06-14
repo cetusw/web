@@ -46,7 +46,6 @@ input[type="file"] {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-color: rgba(221, 120, 63, 1);
     border-radius: 16px;
     text-align: center;
     font: 400 16px/32px "Oxygen", sans-serif;

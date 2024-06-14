@@ -31,6 +31,9 @@ function checkPassword($userId, $data, mysqli $conn): bool
 	return false;
 }
 
+session_name('auth');
+session_start();
+
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'POST') {
 	$connection = createDBConnection();
@@ -39,6 +42,8 @@ if ($method === 'POST') {
   echo $dataAsJson;
 	$userId = findUser($dataAsArray, $connection);
 	if (checkPassword($userId, $dataAsArray, $connection)) {
+		$_SESSION['user_id'] = $userId;
+		$_SESSION['email'] = $dataAsArray['email'];
 		http_response_code(200);
 	} else {
 		http_response_code(401);;
