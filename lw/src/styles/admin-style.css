@@ -301,7 +301,7 @@ main {
     color: rgba(153, 153, 153, 1);
 }
 
-.form input {
+input {
     width: 560px;
     height: 40px;
     background-color: rgba(255, 255, 255, 1);
@@ -313,12 +313,26 @@ main {
     padding: 0 8px 0 4px;
 }
 
-.input-error {
-    background-color: rgba(255, 100, 255, 1);
+.input-blur {
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(234, 234, 234, 1);
+}
+
+.input-focus {
+    background-color: rgba(247, 247, 247, 1);
+    border-bottom: 1px solid rgba(46, 46, 46, 1);
+}
+
+.input-error-empty {
+    border-bottom: 1px solid rgba(232, 105, 97, 1);
+}
+
+.input-error-incorrect {
+    background-color: rgba(247, 247, 247, 1);
+    border-bottom: 1px solid rgba(232, 105, 97, 1);
 }
 
 input:focus {
-    border: none;
     outline: none;
 }
 

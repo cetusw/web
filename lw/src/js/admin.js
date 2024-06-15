@@ -63,6 +63,26 @@ window.addEventListener('load', function() {
 
     const requiredFields = document.querySelectorAll('[required]');
 
+    const inputs = document.querySelectorAll('input');
+
+    function inputFocus(event) {
+        event.target.className = 'input-focus'
+
+        event.target.addEventListener('blur', inputBlur);
+    }
+
+    function inputBlur(event) {
+        if (event.target.value === '') {
+            event.target.className = ''
+        } else {
+            event.target.className = 'input-focus'
+        }
+    }
+
+    for (const input of inputs) {
+        input.addEventListener('focus', inputFocus);
+    }
+
     function initListeners() {
         inputTitle.addEventListener('input', changeTitle);
         inputDescription.addEventListener('input', changeDescription);
@@ -157,13 +177,7 @@ window.addEventListener('load', function() {
             formIsOk.hidden = true;
             for (let field of requiredFields) {
                 if (field.value.trim() === '') {
-
-                    /*const errorMessageElement = document.createElement('p');
-                    errorMessageElement.textContent = 'Field is required';
-                    errorMessageElement.style.color = 'rgba(232, 105, 97, 1)';
-
-                    field.parentNode.insertBefore(errorMessageElement, field.nextSibling);*/
-                    field.style.borderBottom = '1px solid rgba(232, 105, 97, 1)';
+                    field.classList.add('input-error-empty');
                 }
             }
         }

@@ -9,6 +9,13 @@
   margin: 0 auto;
 }
 
+/*@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 705px;
+    margin: 0 auto;
+  }
+}*/
+
 .header-block {
   height: 500px;
   background: url("../images/hills.jpg") no-repeat;
@@ -96,15 +103,10 @@
 }
 
 .posts__featured {
-  width: 940px;
   margin: 0 auto;
 }
 
-.posts__blocks {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .posts__title {
   padding-top: 60px;
@@ -128,6 +130,12 @@
   background-size: cover;
   width: 420px;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .featured-post {
+    width: 345px;
+  }
 }
 
 .featured-post__title {
@@ -192,7 +200,8 @@
 
 .posts__blocks {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -260,6 +269,34 @@
   font: 400 11px/35px "Oxygen", sans-serif;
   color: rgba(153, 153, 153, 1);
   margin: 0 13px 0 0;
+}
+
+@media screen and (max-width: 900px) {
+  .recent-post {
+    width: 222px;
+  }
+
+  .recent-post__image {
+    width: 222px;
+  }
+
+  .recent-post__subtitle {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recent-post {
+    width: 92%;
+  }
+
+  .recent-post__image {
+    width: 92%;
+  }
+
+  .recent-post__subtitle {
+    width: 85%;
+  }
 }
 
 .footer-block {

@@ -10,11 +10,32 @@ window.addEventListener('load', function() {
 
     const requiredFieldsNotification = document.getElementById('required-fields-empty');
     const dataIsIncorrectNotification = document.getElementById('data-is-incorrect');
-    const emailIsRequiredNotification = document.getElementById('login__email-is-required')
+    const emailIsRequiredNotification = document.getElementById('email-is-required');
+    const emailIsIncorrectNotification = document.getElementById('email-is-incorrect');
+    const passwordIsRequiredNotification = document.getElementById('password-is-required');
 
     //inputs
     const emailInput = document.getElementById('input-email');
     const passwordInput = document.getElementById('input-password');
+    const inputs = document.querySelectorAll('input');
+
+    function inputFocus(event) {
+        event.target.className = 'input-focus'
+
+        event.target.addEventListener('blur', inputBlur);
+    }
+
+    function inputBlur(event) {
+        if (event.target.value === '') {
+            event.target.className = ''
+        } else {
+            event.target.className = 'input-focus'
+        }
+    }
+
+    for (const input of inputs) {
+        input.addEventListener('focus', inputFocus);
+    }
 
     function initListeners() {
         togglePasswordButton.addEventListener('click', toggleVisibility);
@@ -41,6 +62,7 @@ window.addEventListener('load', function() {
     function validateEmail(email) {
         let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
+
     }
 
     function isValidPostData() {
@@ -49,8 +71,8 @@ window.addEventListener('load', function() {
 
     async function authorization(event) {
         event.preventDefault();
+        clearNotifications();
         if (isValidPostData()) {
-            clearNotifications();
             console.log(userData);
             const response = await fetch('/api/login', {
                 method: "POST",
@@ -69,16 +91,30 @@ window.addEventListener('load', function() {
         } else {
             requiredFieldsNotification.classList.add('show');
             if (!validateEmail(userData.email)) {
-                emailInput.style.borderBottom = '1px solid rgba(232, 105, 97, 1)';
+                if (userData.email !== '') {
+                    emailIsIncorrectNotification.classList.add('show')
+                    emailInput.className = 'input-error-incorrect';
+                } else {
+                    emailIsRequiredNotification.classList.add('show');
+                    emailInput.className = 'input-error-empty';
+                }
             }
             if (userData.password.length < 6) {
-                passwordInput.style.borderBottom = '1px solid rgba(232, 105, 97, 1)';
+                if (userData.password !== '') {
+                    passwordInput.className = 'input-error-incorrect';
+                } else {
+                    passwordIsRequiredNotification.classList.add('show');
+                    passwordInput.className = 'input-error-empty';
+                }
             }
         }
     }
 
     function writeEmail(event) {
         clearNotifications();
+        emailIsIncorrectNotification.classList.remove('show');
+        emailIsRequiredNotification.classList.remove('show');
+        emailInput.className = 'input-focus';
         if (event.target.value !== '') {
             userData.email = event.target.value;
         } else {
@@ -89,6 +125,8 @@ window.addEventListener('load', function() {
 
     function writePassword(event) {
         clearNotifications();
+        passwordIsRequiredNotification.classList.remove('show');
+        passwordInput.className = 'input-focus';
         if (event.target.value !== '') {
             userData.password = event.target.value;
         } else {

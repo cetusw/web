@@ -2,7 +2,7 @@
 
 require_once 'ConnectionProvider.php';
 
-function findUser($data, mysqli $conn): int
+function findUser(array $data, mysqli $conn): int
 {
 	$sql = "SELECT user_id FROM user WHERE email = ?";
 	$stmt = $conn->prepare($sql);
@@ -16,7 +16,7 @@ function findUser($data, mysqli $conn): int
 	return $row['user_id'];
 }
 
-function checkPassword($userId, $data, mysqli $conn): bool
+function checkPassword(int $userId, array $data, mysqli $conn): bool
 {
 	$salt = 'MyPass';
   $sql = "SELECT password FROM user WHERE user_id = ?";
@@ -31,24 +31,22 @@ function checkPassword($userId, $data, mysqli $conn): bool
 	return false;
 }
 
-session_name('auth');
-session_start();
 
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'POST') {
 	$connection = createDBConnection();
 	$dataAsJson = file_get_contents('php://input');
 	$dataAsArray = json_decode($dataAsJson, true);
-  echo $dataAsJson;
 	$userId = findUser($dataAsArray, $connection);
 	if (checkPassword($userId, $dataAsArray, $connection)) {
+		session_name('auth');
+		session_start();
 		$_SESSION['user_id'] = $userId;
 		$_SESSION['email'] = $dataAsArray['email'];
 		http_response_code(200);
 	} else {
 		http_response_code(401);;
 	}
-
 	closeDBConnection($connection);
 } else {
 	echo 'Метод не POST';
